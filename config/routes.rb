@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :expense_categories
   root 'sessions#new'
 
   resource :sessions
