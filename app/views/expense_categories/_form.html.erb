@@ -11,10 +11,6 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :expense_category_user_id %>
-  </div>
 
   <div class="field">
     <%= form.label :title %>
@@ -25,3 +21,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<%#= f.hidden_field :service_id, value: @service.id %>

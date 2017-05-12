@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :expense_category_id %>
-    <%= form.text_field :expense_category_id, id: :receipt_expense_category_id %>
+    <%= form.collection_select(:expense_category_id,current_user.expense_categories, :id, :title) %>
   </div>
 
   <div class="field">
@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :date %>
-    <%= form.text_field :date, id: :receipt_date %>
+    <%= form.date_field :date, id: :receipt_date %>
   </div>
 
   <div class="field">

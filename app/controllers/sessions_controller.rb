@@ -10,12 +10,8 @@ class SessionsController < ApplicationController
     if @user.nil?
       return redirect_to new_users_path
     else
+      session[:user_id] = @user.id
       return redirect_to expense_categories_path if @user
     end
-    # session[:user_id] = @user.id
-
-
-    # logged in, hooray
-
   end
 end

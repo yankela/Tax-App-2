@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+
+section.module.parallax {
+  height: 600px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax-1 {
+  background-image: url("https://68.media.tumblr.com/0c6d3560da9714e5fcff5f5e92781177/tumblr_opt57wv6E11uaq136o1_1280.jpg");
+}
+
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+  }
+
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 160px;
+  }
+}

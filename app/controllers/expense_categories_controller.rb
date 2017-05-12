@@ -4,7 +4,7 @@ class ExpenseCategoriesController < ApplicationController
   # GET /expense_categories
   # GET /expense_categories.json
   def index
-    @expense_categories = ExpenseCategory.all
+    @expense_categories = current_user.expense_categories.all
   end
 
   # GET /expense_categories/1
@@ -14,7 +14,7 @@ class ExpenseCategoriesController < ApplicationController
 
   # GET /expense_categories/new
   def new
-    @expense_category = ExpenseCategory.new
+    @expense_category = current_user.expense_categories.new
   end
 
   # GET /expense_categories/1/edit
@@ -24,7 +24,7 @@ class ExpenseCategoriesController < ApplicationController
   # POST /expense_categories
   # POST /expense_categories.json
   def create
-    @expense_category = ExpenseCategory.new(expense_category_params)
+    @expense_category = current_user.expense_categories.new(expense_category_params)
 
     respond_to do |format|
       if @expense_category.save
@@ -64,7 +64,7 @@ class ExpenseCategoriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_expense_category
-      @expense_category = ExpenseCategory.find(params[:id])
+      @expense_category = current_user.expense_categories.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

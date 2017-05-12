@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @expense_category.user %>
+  <%= @expense_category.user.first_name %>
 </p>
 
 <p>
@@ -12,3 +12,5 @@
 
 <%= link_to 'Edit', edit_expense_category_path(@expense_category) %> |
 <%= link_to 'Back', expense_categories_path %>
+
+<br><%= link_to 'New Receipt', new_receipt_path %></br>
