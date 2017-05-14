@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :receipts
   resources :expense_categories
-  root 'users#new'
+  root 'users#home'
 
   resource :sessions
   resource :users
