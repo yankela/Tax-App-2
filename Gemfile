@@ -11,6 +11,13 @@ gem 'rails', '~> 5.1.0'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 gem 'hirb'
+ruby "2.4.1"
+gem 'dotenv-rails'
+gem 'hirb'
+gem 'aws-sdk-rails'
+gem 'paperclip'
+gem 'aws-sdk'
+gem 'faker'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
