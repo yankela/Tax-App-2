@@ -13,7 +13,7 @@ gem 'pg'
 gem 'hirb'
 ruby "2.4.1"
 gem 'dotenv-rails'
-gem 'hirb'
+
 gem 'aws-sdk-rails'
 gem 'paperclip'
 gem 'aws-sdk'
