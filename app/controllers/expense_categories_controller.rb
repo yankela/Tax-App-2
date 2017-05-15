@@ -4,7 +4,7 @@ class ExpenseCategoriesController < ApplicationController
   # GET /expense_categories
   # GET /expense_categories.json
   def index
-    @expense_categories = current_user.expense_categories.all
+    @expense_categories = ExpenseCategory.all
   end
 
   # GET /expense_categories/1
@@ -14,7 +14,7 @@ class ExpenseCategoriesController < ApplicationController
 
   # GET /expense_categories/new
   def new
-    @expense_category = current_user.expense_categories.new
+    @expense_category = ExpenseCategory.new
   end
 
   # GET /expense_categories/1/edit
@@ -24,7 +24,7 @@ class ExpenseCategoriesController < ApplicationController
   # POST /expense_categories
   # POST /expense_categories.json
   def create
-    @expense_category = current_user.expense_categories.new(expense_category_params)
+    @expense_category = current_user.ExpenseCategory.new(expense_category_params)
 
     respond_to do |format|
       if @expense_category.save
