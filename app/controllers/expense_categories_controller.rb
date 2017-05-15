@@ -24,7 +24,7 @@ class ExpenseCategoriesController < ApplicationController
   # POST /expense_categories
   # POST /expense_categories.json
   def create
-    @expense_category = current_user.ExpenseCategory.new(expense_category_params)
+    @expense_category = current_user.expense_categories.new(expense_category_params)
 
     respond_to do |format|
       if @expense_category.save
@@ -59,6 +59,7 @@ class ExpenseCategoriesController < ApplicationController
       format.html { redirect_to expense_categories_url, notice: 'Expense category was successfully destroyed.' }
       format.json { head :no_content }
     end
+
   end
 
   private
@@ -71,4 +72,5 @@ class ExpenseCategoriesController < ApplicationController
     def expense_category_params
       params.require(:expense_category).permit(:user_id, :title)
     end
+
 end
