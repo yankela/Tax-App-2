@@ -24,11 +24,11 @@ class ReceiptsController < ApplicationController
   # POST /receipts
   # POST /receipts.json
   def create
-    @receipt = Receipt.new(receipt_params)
+    @receipt = expense_categories.Receipt.new(receipt_params)
 
     respond_to do |format|
       if @receipt.save
-        format.html { redirect_to @receipt, notice: 'Receipt was successfully created.' }
+        format.html { redirect_to @receipt, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @receipt }
       else
         format.html { render :new }
@@ -36,7 +36,6 @@ class ReceiptsController < ApplicationController
       end
     end
   end
-
   # PATCH/PUT /receipts/1
   # PATCH/PUT /receipts/1.json
   def update
@@ -69,6 +68,7 @@ class ReceiptsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def receipt_params
-      params.require(:receipt).permit(:expense_category_id, :photo, :total, :date, :store_name)
+      params.require(:receipt).permit(:picture, :expense_category_id)
+
     end
 end

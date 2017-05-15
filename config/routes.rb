@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :receipts
-  resources :expense_categories
+
+  resources :expense_categories do
+      resources :receipts
+  end
   root 'users#home'
 
   resources :sessions, only: [:create, :new, :destroy]
