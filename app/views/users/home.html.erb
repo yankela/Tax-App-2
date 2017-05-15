@@ -1,5 +1,8 @@
 <h1> SUPER AWESOME SCAN AND FORGET RECEIPT APP </h1>
 
-<%= link_to 'login now!', new_session_path %>
+
 <br>
+
+<% unless logged_in? %>
 <%= link_to "Join The Awesomeness", new_users_path%>
+<%end%>
