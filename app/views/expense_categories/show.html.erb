@@ -9,7 +9,7 @@
   <strong>Title:</strong>
 
 </p>
-<!-- <%= render @expense_category.receipts%> -->
+
 
 
 
@@ -18,3 +18,6 @@
 <%= link_to 'Back', expense_categories_path %>
 
 <br><%= link_to 'Add Receipt', new_expense_category_receipt_path(@expense_category) %></br>
+
+
+<%= render @expense_category.receipts%>
