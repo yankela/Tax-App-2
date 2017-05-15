@@ -14,4 +14,10 @@ class SessionsController < ApplicationController
       return redirect_to expense_categories_path if @user
     end
   end
+
+  def destroy
+    session[:user_id] = nil
+    flash[:notice] = "You are now logged out"
+    redirect_to root_url
+  end
 end
