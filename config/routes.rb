@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
   resources :expense_categories do
-      resources :receipts
+      resources :receipts, shallow: true
   end
+  resources :receipts
+
   root 'users#home'
 
   resources :sessions, only: [:create, :new, :destroy]

@@ -1,29 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Expense category:</strong>
-  <%= @receipt.expense_category %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @receipt.photo %>
-</p>
-
-<p>
-  <strong>Total:</strong>
-  <%= @receipt.total %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @receipt.date %>
-</p>
-
-<p>
-  <strong>Store name:</strong>
-  <%= @receipt.store_name %>
-</p>
-
+  <%= image_tag @receipt.picture.url(:large) %>
 <%= link_to 'Edit', edit_receipt_path(@receipt) %> |
 <%= link_to 'Back', receipts_path %>

@@ -15,6 +15,7 @@ class ReceiptsController < ApplicationController
   # GET /receipts/new
   def new
     @receipt = Receipt.new
+    @expense_category = ExpenseCategory.find(params[:expense_category_id])
   end
 
   # GET /receipts/1/edit
@@ -24,7 +25,10 @@ class ReceiptsController < ApplicationController
   # POST /receipts
   # POST /receipts.json
   def create
-    @receipt = expense_categories.Receipt.new(receipt_params)
+    @expense_category = ExpenseCategory.find(params[:expense_category_id  ])
+
+    @receipt = Receipt.new(receipt_params)
+      @receipt.expense_category = @expense_category
 
     respond_to do |format|
       if @receipt.save
@@ -61,14 +65,14 @@ class ReceiptsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_receipt
-      @receipt = Receipt.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_receipt
+    @receipt = Receipt.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def receipt_params
-      params.require(:receipt).permit(:picture, :expense_category_id)
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def receipt_params
+    params.require(:receipt).permit(:picture, :expense_category_id)
 
-    end
+  end
 end
