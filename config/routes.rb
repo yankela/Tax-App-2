@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :expense_categories
   root 'users#home'
 
-  resources :sessions, only: [:create, :new, :destoy]
+  resources :sessions, only: [:create, :new, :destroy]
   resource :users
   get '/logout', to: 'sessions#destroy'
   get '/login', to: 'sessions#new'
