@@ -3,5 +3,7 @@ class User < ApplicationRecord
 
   has_many :expense_categories
   has_many :receipts, through: :expense_categories
-  
+
+
+
 end

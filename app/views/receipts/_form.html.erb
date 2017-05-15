@@ -1,10 +1,10 @@
-<%= form_with(model: receipt, local: true) do |form| %>
-  <% if receipt.errors.any? %>
+<%= form_with(model: receipt, multipart: true) do |form| %>
+  <% if user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
-      <% receipt.errors.full_messages.each do |message| %>
+      <% user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,28 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :expense_category_id %>
-    <%= form.collection_select(:expense_category_id,current_user.expense_categories, :id, :title) %>
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :user_name %>
   </div>
 
   <div class="field">
-    <%= form.label :photo %>
-    <%= form.text_field :photo, id: :receipt_photo %>
-  </div>
-
-  <div class="field">
-    <%= form.label :total %>
-    <%= form.number_field :total, id: :receipt_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_field :date, id: :receipt_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :store_name %>
-    <%= form.text_field :store_name, id: :receipt_store_name %>
+    <%= form.label :picture %>
+    <%= form.file_field :picture, id: :user_picture %>
   </div>
 
   <div class="actions">
