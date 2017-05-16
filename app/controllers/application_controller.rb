@@ -15,9 +15,10 @@ class ApplicationController < ActionController::Base
   end
 
   def require_logged_in
-    !logged_in? #was !logged_in? "You must be logged in to access this section"
+    unless logged_in? #was !logged_in? "You must be logged in to access this section"
     flash[:error] = 'Please Log In To Do That, Stranger'
     redirect_to new_session_path
+  end
 end
 
 # def autheticated
