@@ -76,6 +76,9 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    delayed_paperclip (3.0.1)
+      activejob (>= 4.2)
+      paperclip (>= 3.3)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
@@ -208,6 +211,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13.0)
   coffee-rails (~> 4.2)
+  delayed_paperclip
   dotenv-rails
   faker
   hirb

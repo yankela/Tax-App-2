@@ -10,5 +10,5 @@ class Receipt < ApplicationRecord
     medium: '300x300>',
     large: '600x800>'
   }
-  
+  process_in_background :picture
 end
