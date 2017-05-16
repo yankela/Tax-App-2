@@ -13,6 +13,7 @@ gem 'pg'
 gem 'hirb'
 ruby "2.4.1"
 gem 'dotenv-rails'
+gem "delayed_paperclip"
 
 gem 'aws-sdk-rails'
 gem 'paperclip'
