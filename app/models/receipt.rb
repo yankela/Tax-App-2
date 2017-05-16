@@ -10,5 +10,11 @@ class Receipt < ApplicationRecord
     medium: '300x300>',
     large: '600x800>'
   }
-  process_in_background :picture
+
+  process_in_background :picture, processing_image_url: :processing_image_fallback
+
+ def processing_image_fallback
+   options = picture.options
+   options[:interpolator].interpolate(options[:url], picture, :original)
+ end
 end
