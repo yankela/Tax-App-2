@@ -1,9 +1,17 @@
 <div class="nav-bar">
   <% if logged_in? %>
   <a href="#name"><%= current_user.first_name%></a>
-  <a href="#logout"><%=link_to "Log Out", logout_path %></a>
-  <a href="#home"><%=link_to "Home", expense_categories_path %></a>
+  <a href="#logout"><%=link_to "LOG OUT", logout_path %></a>
+  <a href="#home"><%=link_to "HOME", expense_categories_path %></a>
   <% else %>
-  <a href="#login"><%= link_to "Log In", login_path %></a>
+  <a href="#login"><%= link_to "LOG IN", login_path %></a>
   <% end %>
 </div>
+
+<% if logged_in? %>
+<div class="bottom-space">
+  <br>
+  <br>
+</div>
+<% else %>
+<%end%>

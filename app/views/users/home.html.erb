@@ -1,11 +1,24 @@
+<div class="home-background-color">
+
 
 <div class="intro">
-<h1>Don't miss the opportunity to get some cash back</h1>
-<h2>like this guy.</h2>
-<h3>Sign up for the tax app today</h3>
+  <br>
+  <h1>Don't miss the opportunity to get some cash back</h1>
+  <h1>like this guy...</h1>
+
+  <div class="png">
+  <img src="https://68.media.tumblr.com/4dc0152b39849d158e1b5fd28fa5c731/tumblr_oq28ukUH6U1uaq136o1_1280.jpg" alt="little guy" height="370">
+  </div>
+
+
+  <p>Tax app gives you the ability to upload photos of receipts right from your phone. This helps keep your
+    expenses organized and ready for tax season. Sign up to see how the magic happens!
+  </p>
+  </div>
+
+  <div class="button">
+    <% unless logged_in? %>
+    <%= link_to "JOIN THE AWESOMENESS", new_users_path, class: 'btn btn-default btn-lg' %>
+    <%end%>
+  </div>
 </div>
-
-
-<% unless logged_in? %>
-<%= link_to "Join The Awesomeness", new_users_path%>
-<%end%>

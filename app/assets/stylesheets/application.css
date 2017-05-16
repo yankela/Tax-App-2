@@ -12,25 +12,33 @@
  *
  *= require_tree .
  *= require_self
+  *= require bootstrap/dist/css/bootstrap.min
+
  */
- body {
+body {
    margin: 0;
    padding: 0;
  }
 
 .nav-bar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #D4F5B7;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 130%;
 }
 
 .nav-bar a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #626262;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: Young;
+}
+
+
+.button {
+  text-align: center;
 }
