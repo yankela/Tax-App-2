@@ -1,7 +1,17 @@
-<h1> SUPER AWESOME SCAN AND FORGET RECEIPT APP </h1>
 
+<div class="intro">
+<h1>Don't miss the opportunity to get some cash back</h1>
+<h2>like this guy.</h2>
+<h3>Sign up for the tax app today</h3>
+</div>
 
-<br>
+<% if logged_in? %>
+<%= current_user.first_name%>
+<%=link_to "Log Out", logout_path %>
+<%=link_to "Home", expense_categories_path %>
+<% else %>
+<%= link_to "Log In", login_path %>
+<% end %>
 
 <% unless logged_in? %>
 <%= link_to "Join The Awesomeness", new_users_path%>

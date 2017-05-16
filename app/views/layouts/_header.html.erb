@@ -1,5 +1,5 @@
 <% if logged_in? %>
-Hiya, <%= current_user.first_name %>! You're looking mighty fine today!
+<%= current_user.first_name%>
 <%=link_to "Log Out", logout_path %>
 <%=link_to "Home", expense_categories_path %>
 <% else %>
