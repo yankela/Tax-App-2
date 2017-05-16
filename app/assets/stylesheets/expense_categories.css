@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 80%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
@@ -16,14 +16,14 @@ section.module:last-child {
 }
 
 section.module.parallax {
-  height: 600px;
+  height: 400px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
 section.module.parallax-1 {
-  background-image: url("money.jpg");
+  background-image: url("https://68.media.tumblr.com/4269e742b794214731aece3e72e38501/tumblr_oq2h7zZk9H1uaq136o1_1280.png");
 }
 
 @media all and (min-width: 600px) {
