@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :require_logged_in
+
   # before_action :autheticated
 
 
@@ -14,16 +15,16 @@ class ApplicationController < ActionController::Base
   end
 
   def require_logged_in
-    if !logged_in? #was !logged_in?
-      redirect_to new_sessions_path, :notice => "Log in please!"
-    end
-  end
+    !logged_in? #was !logged_in? "You must be logged in to access this section"
+    flash[:error] = 'Please Log In To Do That, Stranger'
+    redirect_to new_session_path
+end
 
-  # def autheticated
-  #   if logged_in?
-  #     redirect_to expense_categories_path
-  #   else
-  #     redirect_to root_path
-  #   end
-  # end
+# def autheticated
+#   if logged_in?
+#     redirect_to expense_categories_path
+#   else
+#     redirect_to root_path
+#   end
+# end
 end
