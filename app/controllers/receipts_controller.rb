@@ -39,6 +39,7 @@ end
 
     respond_to do |format|
       if @receipt.save
+        OcrTextJob.new(@receipt.id, @receipt.picture.url(:original)).enqueue
         format.html { redirect_to @receipt, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @receipt }
       else

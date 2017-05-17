@@ -1,0 +1,4 @@
+web: rails s
+queue: /usr/local/opt/redis/bin/redis-server
+resque-web: resque-web -F
+worker: VERBOSE=1 RESQUE_TERM_TIMEOUT=1 TERM_CHILD=1 QUEUE=* rake environment resque:work
