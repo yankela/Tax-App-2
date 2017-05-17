@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'Create PDF document', receipts_path(@receipts, :format => :pdf)%>
 <br>
 <h1>Receipts</h1>
+<%= wicked_pdf_stylesheet_link_tag "documents" %>
+
+<div class="document">
+  <%= render :partial => 'layouts/partial.html.erb' %>
+</div>
 <br>
 <%= link_to 'New Receipt', new_receipt_path %>
 <table>

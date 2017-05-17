@@ -6,6 +6,12 @@ class ReceiptsController < ApplicationController
   # GET /receipts.json
   def index
     @receipts = Receipt.all
+    respond_to do |format|
+  format.html
+  format.pdf do
+    render :pdf => "receipts.pdf",:template => "receipts/index.html.erb"   # Excluding ".pdf" extension.
+  end
+end
   end
 
   # GET /receipts/1
