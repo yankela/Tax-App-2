@@ -19,7 +19,7 @@ class ExpenseCategoriesController < ApplicationController
   end
 
   def receiptslist
-    @expense_categories = ExpenseCategory.all
+    @expense_categories = current_user.expense_categories.all
     respond_to do |format|
       format.html
       format.pdf do

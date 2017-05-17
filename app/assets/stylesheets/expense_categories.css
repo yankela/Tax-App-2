@@ -2,14 +2,40 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.welcome {
+  /*font-size: 300px;*/
+  font-family: Young;
+  text-align: center;
+}
+.welcome p {
+    font-family: Young;
+    font-size: 20px;
+}
 .container {
   width: 80%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
+.newexpensebutton {
+    text-align: center;
+}
+.newexpensebutton .btn-default {
+    background-color: #b2d88d;
+    color: #fff;
+    border-color: #fff;
+    border
+    text-align: center;
+    font-family: Young;
+    border-radius: 15px;
+}
+.newexpensebutton .btn-default:hover,
+.btn-default:focus,
+.btn-default:active    {
+    background-color: #D4F5B7;
+    color: #FFF;
+    border-color: #D4F5B7;
+}
 
 section.module:last-child {
   margin-bottom: 0;
@@ -27,18 +53,10 @@ section.module.parallax-1 {
 }
 
 @media all and (max-width: 750px) {
-  section.module h2 {
-    font-size: 42px;
-  }
-  section.module p {
-    font-size: 20px;
-  }
   section.module.parallax-1 {
     background-image: url("MobileHomePage.png");
   }
 }
 @media all and (min-width: 960px) {
-  section.module.parallax h1 {
-    font-size: 160px;
-  }
+
 }
