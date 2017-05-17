@@ -11,7 +11,7 @@ class Receipt < ApplicationRecord
     large: '600x800>'
   }
 
-  process_in_background :picture, processing_image_url: :processing_image_fallback
+  process_in_background :picture, processing_image_url: :processing_image_fallback, queue: "paperclip"
 
  def processing_image_fallback
    options = picture.options
