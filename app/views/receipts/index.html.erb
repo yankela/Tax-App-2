@@ -8,23 +8,24 @@
   <%= render :partial => 'layouts/partial.html.erb' %>
 </div>
 <br>
-<%= link_to 'New Receipt', new_receipt_path %>
+<%#= link_to 'New Receipt', new_receipt_path %>
 <table>
   <thead>
     <tr>
       <th>Expense category</th>
       <th>Photo</th>
-      <th>Total</th>
+      <!-- <th>Total</th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
 </table>
 
-<br>
+
 <tbody>
   <% @receipts.each do |receipt| %>
     <tr>
       <td><%= receipt.expense_category.title %></td>
+      <br>
       <td><%= image_tag receipt.picture.url(:medium)%></td>
       <td><%#= receipt.picture %></td>
       <td><%#= link_to 'Show', receipt_path %></td>
@@ -33,4 +34,9 @@
     </tr>
   <% end %>
 </tbody>
+<br>
+
+</tbody>
+
+
 </table>

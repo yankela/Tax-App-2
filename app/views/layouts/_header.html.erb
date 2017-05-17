@@ -1,8 +1,10 @@
 <div class="nav-bar">
   <% if logged_in? %>
   <a href="#name"><%= current_user.first_name%></a>
-  <a href="#logout"><%=link_to "LOG OUT", logout_path %></a>
+  <a href="#receipts"><%=link_to "MAIN PAGE", root_path %></a>
   <a href="#home"><%=link_to "HOME", expense_categories_path %></a>
+  <a href="#receipts"><%=link_to "RECEIPTS", receiptslist_path %></a>
+  <a href="#logout"><%=link_to "LOG OUT", logout_path %></a>
   <% else %>
   <a href="#login"><%= link_to "LOG IN", login_path %></a>
   <% end %>

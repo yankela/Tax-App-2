@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resource :users
   get '/logout', to: 'sessions#destroy'
   get '/login', to: 'sessions#new'
+  get '/receiptslist', to: 'expense_categories#receiptslist'
   # get 'users/new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -18,6 +18,16 @@ class ExpenseCategoriesController < ApplicationController
     @expense_category = ExpenseCategory.new
   end
 
+  def receiptslist
+    @expense_categories = ExpenseCategory.all
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render :pdf => "receiptslist.pdf",:template => "expense_categories/receiptslist.html.erb"   # Excluding ".pdf" extension.
+      end
+    end
+  end
+
   # GET /expense_categories/1/edit
   def edit
   end
