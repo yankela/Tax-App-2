@@ -1,3 +1,22 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Expense Category</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        loading
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Update Expense Category</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section class="module parallax parallax-1">
   <div class="container">
@@ -14,12 +33,12 @@
   <p>create categories to organize your receipts in different groups</p>
 </div>
 <div id=new-animated-expense>
-<%= link_to '<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>'.html_safe, new_expense_category_path%>
+  <%= link_to '<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>'.html_safe, new_expense_category_path%>
 </div>
-  <div class="newexpensebutton">
-    <%= link_to 'Create New Category', new_expense_category_path, class: 'btn btn-default btn-lg'  %>
-    <h2>Expense Categories</h2>
-  </div>
+<div class="newexpensebutton">
+  <%= link_to 'Create New Category', new_expense_category_path, class: 'btn btn-default btn-lg'  %>
+  <h2>Expense Categories</h2>
+</div>
 
 
 
@@ -28,25 +47,26 @@
 <table class="table table-striped">
 
   <thead>
-  <tr>
-  <th>Title</th>
-  <th>View</th>
-  <th>Edit</th>
-  <th>Delete</th>
-  <th colspan="3"></th>
-</tr>
-</thead>
+    <tr>
+      <th>Title</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<tbody>
-  <% @expense_categories.each do |expense_category| %>
-  <tr>
-    <td><%= expense_category.title %></td>
-    <td><%= link_to '<i class="fa fa-eye" aria-hidden="true"></i>'.html_safe, expense_category %></td>
-    <td><%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(expense_category) %></td>
-    <td><%= link_to '<i class="fa fa-minus-circle" aria-hidden="true"></i>'.html_safe, expense_category, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %></td>
-  </tr>
-  <% end %>
-</tbody>
+  <tbody>
+    <% @expense_categories.each do |expense_category| %>
+    <tr>
+      <td><%= expense_category.title %></td>
+      <td><%= link_to '<i class="fa fa-eye" aria-hidden="true"></i>'.html_safe, expense_category %></td>
+      <td><%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(expense_category), remote: true %></td>
+      <td><%= link_to '<i class="fa fa-minus-circle" aria-hidden="true"></i>'.html_safe, expense_category, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %></td>
+      <td><%#= link_to 'Add release', edit_expense_category_path(expense_category),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %></td>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
 
 

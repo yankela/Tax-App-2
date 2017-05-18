@@ -12,9 +12,10 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
 //= require jquery/dist/jquery.min
+//= require_tree .
 //= require bootstrap/dist/js/bootstrap.min
+
 
 $(document).scroll(function() {
   var y = $(this).scrollTop();
