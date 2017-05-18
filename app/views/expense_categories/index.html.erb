@@ -11,30 +11,32 @@
 <p id="notice"><%= notice %></p>
 <div class="welcome">
   <h1>Welcome back, <%= current_user.first_name %>!</h1>
-  <h2>Expense Categories</h2>
   <p>create categories to organize your receipts in different groups</p>
-</div>
-<div class="newexpensebutton">
-<%= link_to 'Create New Category', new_expense_category_path, class: 'btn btn-default btn-lg'  %>
+
+  <div class="newexpensebutton">
+    <%= link_to 'Create New Category', new_expense_category_path, class: 'btn btn-default btn-lg'  %>
+  </div>
+  <h2>Expense Categories</h2>
 </div>
 <table>
-  <!-- <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead> -->
 
-  <tbody>
-    <% @expense_categories.each do |expense_category| %>
-    <tr>
-      <td><%= expense_category.title %></td>
-      <td><%= link_to 'Show', expense_category %></td>
-      <td><%= link_to 'Edit', edit_expense_category_path(expense_category) %></td>
-      <td><%= link_to 'Delete', expense_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
+  <thead>
+  <tr>
+  <th>Title</th>
+  <th>Total</th>
+  <th></th>
+  <th colspan="3"></th>
+</tr>
+</thead>
+
+<tbody>
+  <% @expense_categories.each do |expense_category| %>
+  <tr>
+    <td><%= expense_category.title %></td>
+    <td><%= link_to '<i class="fa fa-eye" aria-hidden="true"></i>'.html_safe, expense_category %></td>
+    <td><%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(expense_category) %></td>
+    <td><%= link_to '<i class="fa fa-minus-circle" aria-hidden="true"></i>'.html_safe, expense_category, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %></td>
+  </tr>
+  <% end %>
+</tbody>
 </table>
-
-<br>

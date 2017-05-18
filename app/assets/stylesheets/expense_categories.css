@@ -2,9 +2,18 @@ body {
   margin: 0;
   padding: 0;
 }
+tbody tr td {
+font-family: Porter;
+/*text-align: center;*/
+/*flex-flow: column;*/
+padding: .5em;
+font-size: 15px;
+background-color: #dee4e8;
+width: 100%;
+}
 .welcome {
   /*font-size: 300px;*/
-  font-family: Young;
+  font-family: Porter;
   text-align: center;
 }
 .welcome p {

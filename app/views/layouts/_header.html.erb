@@ -1,18 +1,9 @@
+<% if logged_in? %>
 <div class="nav-bar">
-  <% if logged_in? %>
   <a href="#main"><%=link_to "main", root_path %></a>
   <a href="#home"><%=link_to "home", expense_categories_path %></a>
   <a href="#receipts"><%=link_to "receipts", receiptslist_path %></a>
   <a href="#logout"><%=link_to "log out", logout_path %></a>
-  <% else %>
-  <a href="#login"><%= link_to "log in", login_path %></a>
-  <% end %>
-</div>
-
-<% if logged_in? %>
-<div class="bottom-space">
-  <br>
-  <br>
 </div>
 <% else %>
-<%end%>
+<% end %>

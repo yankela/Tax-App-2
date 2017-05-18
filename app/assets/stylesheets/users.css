@@ -1,20 +1,23 @@
 /*section.module.parallax-1 {
-  background-image: url("https://68.media.tumblr.com/24d9e991919d62b8c5a4cae2cc7d6aaa/tumblr_oq0truuqHT1uaq136o1_1280.png");
+background-image: url("https://68.media.tumblr.com/24d9e991919d62b8c5a4cae2cc7d6aaa/tumblr_oq0truuqHT1uaq136o1_1280.png");
 }
 
 .container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+width: 100%;
+max-width: 960px;
+margin: 0 auto;
+padding: 0 20px;
 }*/
 
+/*html {
+  background-color: #b2d88d;
+}*/
 .png {
-  padding: .5em;
+  /*padding: .5em;*/
 }
 .home-background-color {
   background-repeat: no-repeat;
-  background-size: 100%;
+  /*background-size: 100%;*/
   background-color: #b2d88d;
 }
 .intro {
@@ -25,27 +28,45 @@
 }
 .intro p {
   font-family: Young;
-  font-size: 20px;
-  padding-top: .28em;
+  font-size: 18px;
 }
-
+.intro h1 {
+  margin: 0px;
+  padding: 20px;
+  font-size: 30px;
+  color: #fff;
+}
+.intro .likethis {
+  font-size: 20px;
+}
 .button {
-  padding: 1.1em 0em 2em 0em;
+  padding: .3em 0em 0em 0em;
   font-family: Young;
   font-size: 25px;
-  color: #b2d88d;
+  color: #5E7280;
+  text-align: center;
+}
+
+
+.login-logout a {
+  font-family: Young;
+  float: bottom;
+  font-size: 15px;
+}
+.login-logout a:hover {
+  background-color: #b2d88d;
 }
 
 .button .btn-default {
-    background-color: #FFF;
-    color: #b2d88d;
-    border-color: #fff;
-    /*border-radius: 25px;*/
+  background-color: #FFF;
+  color: #b2d88d;
+  border-color: #fff;
+  /*border-radius: 25px;*/
 }
 .button .btn-default:hover,
 .btn-default:focus,
 .btn-default:active    {
-    background-color: #D4F5B7;
-    color: #FFF;
-    border-color: #D4F5B7;
+  background-color: #D4F5B7;
+  color: #FFF;
+  border-color: #D4F5B7;
 }
