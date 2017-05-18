@@ -18,7 +18,7 @@
 
 $(document).scroll(function() {
   var y = $(this).scrollTop();
-  if (y > 500) {
+  if (y > 550) {
     $('.fa-plus-circle').fadeIn();
   } else {
     $('.fa-plus-circle').fadeOut();

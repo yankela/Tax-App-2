@@ -13,18 +13,19 @@
   <h1>Welcome back, <%= current_user.first_name %>!</h1>
   <p>create categories to organize your receipts in different groups</p>
 </div>
+<div id=new-animated-expense>
+<%= link_to '<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>'.html_safe, new_expense_category_path%>
+</div>
   <div class="newexpensebutton">
     <%= link_to 'Create New Category', new_expense_category_path, class: 'btn btn-default btn-lg'  %>
     <h2>Expense Categories</h2>
   </div>
-  <div id=new-animated-expense>
-  <%= link_to '<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>'.html_safe, new_expense_category_path%>
-  </div>
 
 
 
 
-<table>
+
+<table class="table table-striped">
 
   <thead>
   <tr>

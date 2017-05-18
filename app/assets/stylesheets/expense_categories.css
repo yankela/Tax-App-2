@@ -8,12 +8,16 @@ body {
 tbody tr td {
   font-family: Porter;
   /*text-align: center;*/
-  /*flex-flow: column;*/
-  padding: .5em;
+  flex-flow: column;
+  /*padding: .5em;*/
   font-size: 18px;
-  background-color: #ededed;
+  /*background-color: green;*/
   width: 100%;
 }
+table {
+  margin: .5em;
+}
+
 .fa-eye:hover {
   color: #7CCFFF;
   background-color: #ededed;
@@ -41,10 +45,10 @@ tbody tr td {
   /*margin-top: 7em;*/
 }
 .fa-plus-circle{
-  /*overflow: hidden;*/
   color: #b2d88d;
   position: fixed;
-  padding: .3em;
+  margin-top: 2.5em;
+  /*padding: .3em;*/
 }
 .welcome {
   /*font-size: 300px;*/
@@ -105,11 +109,16 @@ section.module.parallax-1 {
 @media all and (max-width: 750px) {
   section.module.parallax-1 {
     background-image: url("justhim.png");
-    background-size: 70%;
+    background-size: 50%;
     background-position: center;
     background-color: #F86E64;
   }
+  .fa-plus-circle{
+    margin-top: 2.5em;
+  }
 }
-@media all and (min-width: 960px) {
-
+@media all and (min-width: 751px) {
+  .fa-plus-circle{
+    margin-top: 4em;
+  }
 }
