@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170517162821) do
+ActiveRecord::Schema.define(version: 20170518225753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170517162821) do
     t.datetime "picture_updated_at"
     t.boolean "picture_processing"
     t.text "text_response"
+    t.decimal "total", precision: 8, scale: 2
     t.index ["expense_category_id"], name: "index_receipts_on_expense_category_id"
   end
 
