@@ -1,15 +1,50 @@
+* {
+  text-decoration: none;
+}
 body {
   margin: 0;
   padding: 0;
 }
 tbody tr td {
-font-family: Porter;
-/*text-align: center;*/
-/*flex-flow: column;*/
-padding: .5em;
-font-size: 15px;
-background-color: #dee4e8;
-width: 100%;
+  font-family: Porter;
+  /*text-align: center;*/
+  /*flex-flow: column;*/
+  padding: .5em;
+  font-size: 18px;
+  background-color: #ededed;
+  width: 100%;
+}
+.fa-eye:hover {
+  color: #7CCFFF;
+  background-color: #ededed;
+}
+.fa-eye {
+  color: #7CCFFF;
+}
+.fa-pencil-square-o:hover{
+  color: #B5DEA6;
+  background-color: #ededed;
+}
+.fa-pencil-square-o {
+  color: #9ec691;
+}
+.fa-minus-circle:hover {
+  color: #F86E64;
+  background-color: #ededed;
+}
+.fa-minus-circle {
+  color: #F86E64;
+}
+
+#new-animated-expense {
+  text-align: center;
+  /*margin-top: 7em;*/
+}
+.fa-plus-circle{
+  /*overflow: hidden;*/
+  color: #b2d88d;
+  position: fixed;
+  padding: .3em;
 }
 .welcome {
   /*font-size: 300px;*/
@@ -17,8 +52,8 @@ width: 100%;
   text-align: center;
 }
 .welcome p {
-    font-family: Young;
-    font-size: 20px;
+  font-family: Young;
+  font-size: 20px;
 }
 .container {
   width: 80%;
@@ -27,23 +62,28 @@ width: 100%;
   padding: 0 20px;
 }
 .newexpensebutton {
-    text-align: center;
+  text-align: center;
+  padding: 1em;
+}
+.newexpensebutton h2 {
+  font-family: Porter;
+  padding: .5em;
 }
 .newexpensebutton .btn-default {
-    background-color: #b2d88d;
-    color: #fff;
-    border-color: #fff;
-    border
-    text-align: center;
-    font-family: Young;
-    border-radius: 15px;
+  background-color: #b2d88d;
+  color: #fff;
+  border-color: #fff;
+  border
+  text-align: center;
+  font-family: Young;
+  border-radius: 15px;
 }
 .newexpensebutton .btn-default:hover,
 .btn-default:focus,
 .btn-default:active    {
-    background-color: #D4F5B7;
-    color: #FFF;
-    border-color: #D4F5B7;
+  background-color: #D4F5B7;
+  color: #FFF;
+  border-color: #D4F5B7;
 }
 
 section.module:last-child {
@@ -58,12 +98,16 @@ section.module.parallax {
 }
 
 section.module.parallax-1 {
-  background-image: url("GreenHomePage.png");
+  /*background-image: url("GreenHomePage.png");*/
+  background-color: #F86E64;
 }
 
 @media all and (max-width: 750px) {
   section.module.parallax-1 {
-    background-image: url("MobileHomePage.png");
+    background-image: url("justhim.png");
+    background-size: 70%;
+    background-position: center;
+    background-color: #F86E64;
   }
 }
 @media all and (min-width: 960px) {

@@ -22,7 +22,7 @@ body {
 
 .nav-bar {
   overflow: hidden;
-  background-color: #D4F5B7;
+  background-color: #e8e8e8;
   position: fixed;
   top: 0;
   width: 130%;
@@ -31,9 +31,10 @@ body {
 .nav-bar a {
     float: left;
     display: block;
-    color: #626262;
+    color: #5E7280;
     text-align: center;
-    padding: 14px 12px;
+    padding: 14px 10px;
     text-decoration: none;
-    font-family: Young;
+    font-size: 13px;
+    font-family: Porter;
 }

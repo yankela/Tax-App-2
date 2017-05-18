@@ -12,19 +12,26 @@
 <div class="welcome">
   <h1>Welcome back, <%= current_user.first_name %>!</h1>
   <p>create categories to organize your receipts in different groups</p>
-
+</div>
   <div class="newexpensebutton">
     <%= link_to 'Create New Category', new_expense_category_path, class: 'btn btn-default btn-lg'  %>
+    <h2>Expense Categories</h2>
   </div>
-  <h2>Expense Categories</h2>
-</div>
+  <div id=new-animated-expense>
+  <%= link_to '<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>'.html_safe, new_expense_category_path%>
+  </div>
+
+
+
+
 <table>
 
   <thead>
   <tr>
   <th>Title</th>
-  <th>Total</th>
-  <th></th>
+  <th>View</th>
+  <th>Edit</th>
+  <th>Delete</th>
   <th colspan="3"></th>
 </tr>
 </thead>
@@ -40,3 +47,6 @@
   <% end %>
 </tbody>
 </table>
+
+
+<%= link_to '<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>'.html_safe, new_expense_category_path%>

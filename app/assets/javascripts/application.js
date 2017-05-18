@@ -15,3 +15,12 @@
 //= require_tree .
 //= require jquery/dist/jquery.min
 //= require bootstrap/dist/js/bootstrap.min
+
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 500) {
+    $('.fa-plus-circle').fadeIn();
+  } else {
+    $('.fa-plus-circle').fadeOut();
+  }
+});
