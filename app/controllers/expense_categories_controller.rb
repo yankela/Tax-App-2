@@ -32,6 +32,7 @@ class ExpenseCategoriesController < ApplicationController
   def edit
   end
 
+
   # POST /expense_categories
   # POST /expense_categories.json
   def create
@@ -53,7 +54,7 @@ class ExpenseCategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @expense_category.update(expense_category_params)
-        format.html { redirect_to @expense_category, notice: 'Expense category was successfully updated.' }
+        format.html { redirect_to expense_categories_path, notice: 'Expense category was successfully updated.' }
         format.json { render :show, status: :ok, location: @expense_category }
       else
         format.html { render :edit }
@@ -74,14 +75,14 @@ class ExpenseCategoriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_expense_category
-      @expense_category = current_user.expense_categories.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_expense_category
+    @expense_category = current_user.expense_categories.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def expense_category_params
-      params.require(:expense_category).permit(:user_id, :title)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def expense_category_params
+    params.require(:expense_category).permit(:user_id, :title)
+  end
 
 end
