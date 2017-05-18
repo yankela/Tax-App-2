@@ -10,7 +10,7 @@ class OcrTextJob < ApplicationJob
     image  = vision.image image_path
     p image.text
     receipt = Receipt.find(id)
-    receipt.text_response = image.text
+    receipt.text_response = image.document
     receipt.save
     # [END vision_text_detection_gcs]
   end
