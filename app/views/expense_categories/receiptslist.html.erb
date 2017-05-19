@@ -1,11 +1,12 @@
+<br>
+<br>
 <h1>Receipts</h1>
 <%= link_to 'Create PDF document', receiptslist_path(@expense_categories, :format => :pdf)%>
 <%= wicked_pdf_stylesheet_link_tag "documents" %>
 <div class="document">
   <%= render :partial => 'layouts/partial.html.erb' %>
 </div>
-<br>
-<br>
+
 <tbody>
   <% @expense_categories.each do |expense_category| %>
   <tr>
