@@ -12,7 +12,7 @@ class UsersController < ApplicationController
         format.json { render :show, status: :created, location: @user }
         session[:user_id] = @user.id
       else
-        format.html { render :new }
+        format.html { redirect_to root_path, notice: "Please fill in all required fields." }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -25,5 +25,5 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :password, :password_confirmation, :first_name, :last_name)
   end
 
-  
+
 end
