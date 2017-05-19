@@ -12,7 +12,7 @@ body {
 }
 
 tbody tr td {
-    font-family: Young;
+  font-family: Young;
   /*font-family: Porter;*/
   /*text-align: center;*/
   flex-flow: column;
@@ -116,7 +116,7 @@ section.module.parallax-1 {
   background-color: #F86E64;
 }
 
-@media all and (max-width: 750px) {
+/*@media all and (max-width: 750px) {
   section.module.parallax-1 {
     background-image: url("makingitrain.png");
     background-size: 80%;
@@ -179,7 +179,7 @@ section.module.parallax-1 {
     background-position: 50% 17%;
     background-color: #F86E64;
   }
-}
+}*/
 @media all and (min-width: 800px) {
   section.module.parallax-1 {
     background-image: url("makingitrain.png");
@@ -217,4 +217,12 @@ section.module.parallax-1 {
   background-color: #D4F5B7;
   color: #FFF;
   border-color: #D4F5B7;
+}
+
+.pdftitle {
+  font-family: Porter;
+  font-size: 25px;
+}
+.pdfreceipts {
+  margin: 1em;
 }

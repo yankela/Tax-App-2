@@ -12,8 +12,9 @@
 <tbody>
   <% @expense_categories.each do |expense_category| %>
   <tr>
-    <td><%= expense_category.title %></td>
-    <td><%= render expense_category.receipts%></td>
+    <span class="pdftitle"><td><%= expense_category.title %></td></span>
+    <br>
+    <span class="pdfreceipt"><td><%= render expense_category.receipts%></td></span>
     <br>
   </tr>
   <% end %>
