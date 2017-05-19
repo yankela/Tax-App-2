@@ -18,7 +18,14 @@
     <%= form.label :picture %>
     <%= form.file_field :picture, id: :receipt_picture %>
   </div>
-
+  <div class="field">
+    <%= form.label :total %>
+    <%= form.text_field :total %>
+  </div>
+  <div class="field">
+    <%= form.label :comments %>
+    <%= form.text_field :comments %>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>
