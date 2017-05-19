@@ -4,6 +4,7 @@
 body {
   margin: 0;
   padding: 0;
+      min-height:100%;
 }
 tbody tr td {
   font-family: Porter;
@@ -108,17 +109,74 @@ section.module.parallax-1 {
 
 @media all and (max-width: 750px) {
   section.module.parallax-1 {
-    background-image: url("justhim.png");
-    background-size: 50%;
-    background-position: center;
+    background-image: url("makingitrain.png");
+    background-size: 80%;
+    background-repeat:no-repeat;
+    background-position: 45% 18%;
     background-color: #F86E64;
   }
   .fa-plus-circle{
     margin-top: 2.5em;
   }
 }
-@media all and (min-width: 751px) {
+@media all and (min-width: 400px) {
+  section.module.parallax-1 {
+    background-image: url("makingitrain.png");
+    background-size: 70%;
+    background-repeat:no-repeat;
+    background-position: 50% 25%;
+    background-color: #F86E64;
+  }
+}
+@media all and (min-width: 550px) {
+  section.module.parallax-1 {
+    background-image: url("makingitrain.png");
+    background-size: 60%;
+    background-repeat:no-repeat;
+    background-position: 50% 17%;
+    background-color: #F86E64;
+  }
+}
+@media all and (min-width: 650px) {
+  section.module.parallax-1 {
+    background-image: url("makingitrain.png");
+    background-size: 50%;
+    background-repeat:no-repeat;
+    background-position: 50% 17%;
+    background-color: #F86E64;
+  }
+}
+}
+@media all and (min-width: 700px) {
   .fa-plus-circle{
     margin-top: 4em;
+  }
+  section.module.parallax-1 {
+    background-image: url("makingitrain.png");
+    background-size: 40%;
+    background-repeat:no-repeat;
+    background-position: 35% 17%;
+    background-color: #F86E64;
+  }
+}
+@media all and (min-width: 750px) {
+  .fa-plus-circle{
+    margin-top: 4em;
+  }
+  section.module.parallax-1 {
+    background-image: url("makingitrain.png");
+    background-size: 40%;
+    background-repeat:no-repeat;
+    background-position: 50% 17%;
+    background-color: #F86E64;
+  }
+}
+@media all and (min-width: 800px) {
+  section.module.parallax-1 {
+    background-image: url("makingitrain.png");
+    background-size: 25%;
+    background-repeat:no-repeat;
+    background-position: 50% 23%;
+    background-color: #F86E64;
   }
 }

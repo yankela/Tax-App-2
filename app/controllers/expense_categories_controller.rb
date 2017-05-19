@@ -15,7 +15,12 @@ class ExpenseCategoriesController < ApplicationController
 
   # GET /expense_categories/new
   def new
-    @expense_category = ExpenseCategory.new
+    @expense_category = current_user.expense_categories.new
+    # if !@expense_category.nil?
+    #   redirect_to expense_categories_path(:user => params[:user]), :method => :post
+    # else
+    #
+    # end
   end
 
   def receiptslist
