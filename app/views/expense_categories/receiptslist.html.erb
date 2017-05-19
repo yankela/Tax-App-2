@@ -1,7 +1,9 @@
 <br>
 <br>
-<h1>Receipts</h1>
-<%= link_to 'Create PDF document', receiptslist_path(@expense_categories, :format => :pdf)%>
+<h1 class="pdfintro">Need to share or save your receipts? We created a feature that transforms this page into a PDF document.</h1>
+<div class="pdfbutton">
+  <%= link_to 'Create PDF document', receiptslist_path(@expense_categories, :format => :pdf), class: 'btn btn-default btn-lg'%>
+</div>
 <%= wicked_pdf_stylesheet_link_tag "documents" %>
 <div class="document">
   <%= render :partial => 'layouts/partial.html.erb' %>

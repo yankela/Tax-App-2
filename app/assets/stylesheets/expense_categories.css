@@ -2,6 +2,7 @@ html {
   margin: 0;
   padding: 0;
 }
+
 * {
   text-decoration: none;
 }
@@ -187,4 +188,33 @@ section.module.parallax-1 {
     background-position: 50% 20%;
     background-color: #F86E64;
   }
+}
+/*==============================================================*/
+/*RECEIPTS LIST PAGE*/
+.pdfintro {
+  font-family: Young;
+  font-size: 25px;
+  text-align: center;
+}
+.pdfbutton {
+  padding: .3em 0em 0em 0em;
+  font-family: Young;
+  font-size: 25px;
+  color: #5E7280;
+  text-align: center;
+}
+
+.pdfbutton .btn-default {
+  background-color: #b2d88d;
+  color: #fff;
+  border-color: #fff;
+  font-family: Young;
+  border-radius: 15px;
+}
+.pdfbutton .btn-default:hover,
+.pdfbtn-default:focus,
+.pdfbtn-default:active    {
+  background-color: #D4F5B7;
+  color: #FFF;
+  border-color: #D4F5B7;
 }
