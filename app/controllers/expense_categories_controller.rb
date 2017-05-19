@@ -4,7 +4,7 @@ class ExpenseCategoriesController < ApplicationController
   # GET /expense_categories
   # GET /expense_categories.json
   def index
-    @expense_categories = current_user.expense_categories.all
+    @expense_categories = current_user.expense_categories.all.order('updated_at DESC')
   end
 
   # GET /expense_categories/1
@@ -41,7 +41,7 @@ class ExpenseCategoriesController < ApplicationController
   # POST /expense_categories
   # POST /expense_categories.json
   def create
-    @expense_category = current_user.expense_categories.new(expense_category_params).order(created_at: :desc)
+    @expense_category = current_user.expense_categories.new(expense_category_params)
 
     respond_to do |format|
       if @expense_category.save
