@@ -69,6 +69,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Date Created</th>
       <th>View</th>
       <th>Edit</th>
       <th>Delete</th>
@@ -80,6 +81,7 @@
     <% @expense_categories.each do |expense_category| %>
     <tr>
       <td><%= expense_category.title %></td>
+      <td class="datecreatedexp"><%= expense_category.created_at.strftime("%b%d,%Y")%></td>
       <td><%= link_to '<i class="fa fa-eye" aria-hidden="true"></i>'.html_safe, expense_category %></td>
       <td><%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(expense_category), remote: true %></td>
       <td><%= link_to '<i class="fa fa-minus-circle" aria-hidden="true"></i>'.html_safe, expense_category, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %></td>

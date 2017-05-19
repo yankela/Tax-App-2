@@ -1,5 +1,6 @@
 class Receipt < ApplicationRecord
-  belongs_to :expense_category
+  belongs_to :expense_category#, touch: true
+
 
   validates :picture,
   attachment_content_type: { content_type: /\Aimage\/.*\Z/ },
