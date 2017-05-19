@@ -14,8 +14,21 @@
   <tr>
     <span class="pdftitle"><td><%= expense_category.title %></td></span>
     <br>
-    <span class="pdfreceipt"><td><%= render expense_category.receipts%></td></span>
+    <% expense_category.receipts.each do |receipt| %>
+    <span class="pdfreceipt"><td><%= render receipt %></td>
+      <br>
+      <td><%= link_to 'Show', receipt_path(receipt) %></td>
+      <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
+      <td><%= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </span>
     <br>
+    <% end %>
   </tr>
   <% end %>
 </tbody>
+
+<%#= link_to 'Show', receipt_path(receipt) %>
+<%#= link_to 'Edit', edit_receipt_path(receipt) %>
+<%#= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%#= expense_category.receipt.total %>
+<%#= expense_category.receipt.comments%>

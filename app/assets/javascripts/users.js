@@ -1,6 +1,5 @@
 function ready() {
 
-
    // auto-focus the task_name input box on every page load
    // $('#task_name').focus();
 

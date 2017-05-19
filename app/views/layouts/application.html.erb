@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TaxApp2</title>
-    <%= csrf_meta_tags %>
-    <script src="https://use.fontawesome.com/8ee0aa9f55.js"></script>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>TaxApp2</title>
+  <%= csrf_meta_tags %>
+  <script src="https://use.fontawesome.com/8ee0aa9f55.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  </head>
+</head>
 
-  <body>
-    <% flash.each do |name, msg| -%>
+<body>
+  <%= render 'layouts/header' %>
+  <% flash.each do |name, msg| -%>
   <%= content_tag :div, msg, class: name %>
-<% end -%>
-    <%= render 'layouts/header' %>
-    <%= yield %>
-  </body>
+  <% end -%>
+
+  <%= yield %>
+</body>
 </html>
