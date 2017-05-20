@@ -12,16 +12,14 @@
 <tbody>
   <% @expense_categories.each do |expense_category| %>
   <tr>
+    <br>
     <span class="pdftitle"><td><%= expense_category.title %></td></span>
     <br>
     <% expense_category.receipts.each do |receipt| %>
-    <span class="pdfreceipt"><td><%= render receipt %></td>
-      <br>
+    <span class="pdfreceipt"><td><%= render receipt %></td></span>
       <td><%= link_to 'Show', receipt_path(receipt) %></td>
       <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
       <td><%= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </span>
-    <br>
     <% end %>
   </tr>
   <% end %>

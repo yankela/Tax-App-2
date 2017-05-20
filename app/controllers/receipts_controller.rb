@@ -67,7 +67,7 @@ end
   def destroy
     @receipt.destroy
     respond_to do |format|
-      format.html { redirect_to receipts_url, notice: 'Receipt was successfully destroyed.' }
+      format.html { redirect_to receiptslist_path, notice: 'Receipt was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

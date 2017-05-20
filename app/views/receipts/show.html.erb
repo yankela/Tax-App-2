@@ -1,4 +1,13 @@
+<br>
+<br>
+<br>
 <%= image_tag @receipt.picture.url(:large) %>
+<!-- <p>
+<%=@receipt.total%>
+</p>
+<p>
+<%= @receipt.comments%>
+</p> -->
 <%= link_to 'Edit', edit_receipt_path(@receipt) %> |
-<%= link_to 'Back', expense_category_path %>
+<%= link_to 'Back', receiptslist_path %>
 <p id="notice"><%= notice %></p>
