@@ -224,15 +224,25 @@ section.module.parallax-1 {
   font-size: 25px;
   text-align: center;
 }
-/*.pdfreceipts {
-  margin: 1em;
-}*/
-.showreceipt {
-  color: red;
-}
-.editreceipt {
+.receiptphoto {
 
 }
-.destroyreceipt {
-
+.expense-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.receipt-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 0;
+  @media (min-width: 768px){
+    flex-direction: column;
+  }
+}
+.receiptinfo {
+  /*margin: 15px;*/
+    padding: 25px 15px;
+    text-align: center;
 }
