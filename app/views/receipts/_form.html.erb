@@ -1,4 +1,4 @@
-<%= form_with(model: [expense_category,receipt], multipart: true) do |form| %>
+<%= form_with(model:[expense_category,receipt], multipart: true) do |form| %>
   <% if receipt.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
