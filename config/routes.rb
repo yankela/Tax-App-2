@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :expense_categories do
-      resources :receipts, shallow: true
+      resources :receipts
   end
   resources :receipts
 
