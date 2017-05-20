@@ -261,7 +261,7 @@ section.module.parallax-1 {
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-  padding: 20px 0;
+  /*padding: 20px 0;*/
 }
 .totalcomments {
   font-size: 15px;
