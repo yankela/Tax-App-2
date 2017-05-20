@@ -22,6 +22,7 @@ class ReceiptsController < ApplicationController
   # GET /receipts/new
   def new
     @receipt = Receipt.new
+    @expense_category = ExpenseCategory.find(params[:expense_category_id])
   end
 
   # GET /receipts/1/edit
