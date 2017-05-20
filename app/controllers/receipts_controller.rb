@@ -27,13 +27,15 @@ class ReceiptsController < ApplicationController
 
   # GET /receipts/1/edit
   def edit
+    @expense_category = ExpenseCategory.find(params[:expense_category_id  ])
 
+    @receipt.expense_category = @expense_category
 
   end
 
   # POST /receipts
   # POST /receipts.json
-  def create  
+  def create
     @expense_category = ExpenseCategory.find(params[:expense_category_id  ])
 
     @receipt = Receipt.new(receipt_params)
@@ -53,6 +55,10 @@ class ReceiptsController < ApplicationController
   # PATCH/PUT /receipts/1
   # PATCH/PUT /receipts/1.json
   def update
+    @expense_category = ExpenseCategory.find(params[:expense_category_id  ])
+
+    @receipt = Receipt.new(receipt_params)
+    @receipt.expense_category = @expense_category
     respond_to do |format|
       if @receipt.update(receipt_params)
         format.html { redirect_to @receipt, notice: 'Receipt was successfully updated.' }
