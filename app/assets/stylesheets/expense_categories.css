@@ -241,8 +241,12 @@ section.module.parallax-1 {
     flex-direction: column;
   }
 }
+.totalcomments {
+  font-size: 15px;
+  font-family: Young;
+}
 .receiptinfo {
   /*margin: 15px;*/
-    padding: 25px 15px;
+    padding: 15px 5px;
     text-align: center;
 }

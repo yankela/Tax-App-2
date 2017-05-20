@@ -31,7 +31,7 @@ end
 
   # POST /receipts
   # POST /receipts.json
-  def create
+  def create  
     @expense_category = ExpenseCategory.find(params[:expense_category_id  ])
 
     @receipt = Receipt.new(receipt_params)
