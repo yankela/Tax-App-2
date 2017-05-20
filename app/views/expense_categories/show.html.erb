@@ -19,8 +19,14 @@ and then make a loop that lists all the receipts under the expense category -->
   <br><%= link_to 'Add Receipt', new_expense_category_receipt_path(@expense_category), class: 'btn btn-default btn-lg' %></br>
 </div>
 
-<%= render @expense_category.receipts%>
+
+<%@expense_category.receipts.each do |receipt|%>
+  <%= render receipt%>
+  <%=receipt.total%>
+  <%=receipt.comments%>
+<%end%>
 <br>
-$<%= @receipt.total%>
+
+<%= @receipt.total%>
 <br>
 <%= @receipt.comments%>
