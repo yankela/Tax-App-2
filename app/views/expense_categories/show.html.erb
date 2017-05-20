@@ -12,7 +12,7 @@ and then make a loop that lists all the receipts under the expense category -->
 
 
 <div class="expenseedit">
-<%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(@expense_category) %>
+  <%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(@expense_category) %>
 </div>
 
 <div class="addreceiptbutton">
@@ -21,12 +21,10 @@ and then make a loop that lists all the receipts under the expense category -->
 
 
 <%@expense_category.receipts.each do |receipt|%>
-  <%= render receipt%>
+<%= render receipt%>
+<div class="">
   <%=receipt.total%>
   <%=receipt.comments%>
+</div>
 <%end%>
 <br>
-
-<%= @receipt.total%>
-<br>
-<%= @receipt.comments%>
