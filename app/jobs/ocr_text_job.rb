@@ -50,6 +50,15 @@ class OcrTextJob < ApplicationJob
       return repeat_counter(numero_siete)
     end
 
+    def eigth_run(array)
+      numero_ocho= array.delete(" ").split("\n").select {|n| n.include?(".")}.select {|n| n.length <7}.delete_if {|n| n=~/\p{L}/}.map {|n| n.to_f}
+      return repeat_counter(numero_ocho)
+    end
+    def ninth_run(array)
+      numero_nueve= array.delete(" ").split("\n").delete_if {|n| n=~/\p{L}/}.select {|n| n.length <7}.map {|n| n.to_f}
+      return repeat_counter(numero_nueve)
+    end
+
 
     def repeat_counter(x)
       if x.count < 2
@@ -60,7 +69,6 @@ class OcrTextJob < ApplicationJob
         # x.max_by { |v| freq[v] }
       end
     end
-
 
     def easy_check(x)
       total_array= []
@@ -75,6 +83,8 @@ class OcrTextJob < ApplicationJob
         total_array << fifth_run(x)
         total_array << sixth_run(x)
         total_array << seventh_run(x)
+        total_array << eigth_run(x)
+        total_array << ninth_run(x)
       end
     end
 
