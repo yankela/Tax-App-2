@@ -74,14 +74,18 @@
         <img src="https://68.media.tumblr.com/c45e80c47995f2056c6d8249f40705d8/tumblr_oq9c4pEbPp1uaq136o1_1280.png" alt="little guy" height="370">
       </div>
 
+      <div class="">
 
+      </div>
       <p> SpentBook's got you covered. Upload photos of receipts on the go and search for them when you need them. Also, we help you keep track all year long so you never miss a penny during tax season.
         <% if !logged_in? %>
         Sign up and see how the magic happens!
         <% else %>
         <br>
         <br>
+        <div class="continueorganizing">
         <%= link_to "continue organizing", expense_categories_path, class: 'btn btn-default btn-lg' %>
+        </div>
         <%end%>
       </p>
     </div>
