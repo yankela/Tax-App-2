@@ -53,21 +53,23 @@ padding: 0 20px;
   font-family: Young;
   float: bottom;
   font-size: 15px;
+  color: white;
 }
 .login-logout a:hover {
-  background-color: #b2d88d;
+  background-color:  #F86E64;
+  color: #7CCFFF;
 }
 
 .button .btn-default {
   background-color: #FFF;
-  color: #b2d88d;
+  color: #7CCFFF;
   border-color: #fff;
   /*border-radius: 25px;*/
 }
 .button .btn-default:hover,
 .btn-default:focus,
 .btn-default:active    {
-  background-color: #D4F5B7;
+  background-color: #7CCFFF;
   color: #FFF;
-  border-color: #D4F5B7;
+  border-color: #7CCFFF;
 }
