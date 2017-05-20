@@ -1,24 +1,31 @@
+/*=====================EXPENSE CATEGORIES INDEX=====================*/
+* {
+  text-decoration: none;
+}
 html {
   margin: 0;
   padding: 0;
-}
-
-* {
-  text-decoration: none;
 }
 body {
   margin: 0;
   padding: 0;
 }
 
+/*INTRO*/
+.welcome {
+  font-family: Porter;
+  text-align: center;
+}
+.welcome p {
+  font-family: Young;
+  font-size: 20px;
+}
+/*TABLE*/
+
 tbody tr td {
   font-family: Young;
-  /*font-family: Porter;*/
-  /*text-align: center;*/
   flex-flow: column;
-  /*padding: .5em;*/
   font-size: 18px;
-  /*background-color: green;*/
   width: 100%;
 }
 tbody tr td .datecreatedexp {
@@ -27,6 +34,8 @@ tbody tr td .datecreatedexp {
 table {
   margin: .5em;
 }
+
+/*VIEW EDIT DELETE BUTTONS*/
 
 .fa-eye:hover {
   color: #7CCFFF;
@@ -50,31 +59,38 @@ table {
   color: #F86E64;
 }
 
+/*JQUERY ANIMATION*/
 #new-animated-expense {
   text-align: center;
-  /*margin-top: 7em;*/
 }
 .fa-plus-circle{
   color: #7CCFFF;
   position: fixed;
   margin-top: 2.5em;
-  /*padding: .3em;*/
 }
-.welcome {
-  /*font-size: 300px;*/
-  font-family: Porter;
-  text-align: center;
-}
-.welcome p {
-  font-family: Young;
-  font-size: 20px;
-}
+/*PARALLAX*/
 .container {
   width: 80%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
+section.module:last-child {
+  margin-bottom: 0;
+}
+
+section.module.parallax {
+  height: 400px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax-1 {
+  /*background-image: url("GreenHomePage.png");*/
+  background-color: #f26d65;
+}
+/*CREATE NEW EXPENSE*/
 .newexpensebutton {
   text-align: center;
   padding: 1em;
@@ -98,22 +114,25 @@ table {
   color: #FFF;
   border-color: #b0e2ff;
 }
+/*======================EXPENSE CATEGORIES SHOW PAGE============================*/
 
-section.module:last-child {
-  margin-bottom: 0;
+/*ADD RECEIPT BUTTON*/
+.addreceiptbutton .btn-default {
+  background-color: #7CCFFF;
+  color: #fff;
+  border-color: #fff;
+  text-align: center;
+  font-family: Young;
+  border-radius: 15px;
+}
+.addreceiptbutton .btn-default:hover,
+.btn-default:focus,
+.btn-default:active    {
+  background-color: #b0e2ff;
+  color: #FFF;
+  border-color: #b0e2ff;
 }
 
-section.module.parallax {
-  height: 400px;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-section.module.parallax-1 {
-  /*background-image: url("GreenHomePage.png");*/
-  background-color: #f26d65;
-}
 
 @media all and (max-width: 750px) {
   section.module.parallax-1 {
@@ -188,13 +207,14 @@ section.module.parallax-1 {
     background-color: #F86E64;
   }
 }
-/*==============================================================*/
-/*RECEIPTS LIST PAGE*/
+/*========================RECEIPTS LIST PAGE======================================*/
+/*INTRO*/
 .pdfintro {
   font-family: Young;
   font-size: 25px;
   text-align: center;
 }
+/*PDF BUTTON*/
 .pdfbutton {
   padding: .3em 0em 0em 0em;
   font-family: Young;
@@ -202,7 +222,6 @@ section.module.parallax-1 {
   color: #5E7280;
   text-align: center;
 }
-
 .pdfbutton .btn-default {
   background-color: #7CCFFF;
   color: #fff;
@@ -218,14 +237,11 @@ section.module.parallax-1 {
   color: #FFF;
   border-color: #b0e2ff;
 }
-
+/*RECEIPTS STYLING*/
 .pdftitle {
   font-family: Porter;
   font-size: 25px;
   text-align: center;
-}
-.receiptphoto {
-
 }
 .expense-wrapper {
   display: flex;
@@ -237,16 +253,13 @@ section.module.parallax-1 {
   text-align: center;
   justify-content: center;
   padding: 20px 0;
-  @media (min-width: 768px){
-    flex-direction: column;
-  }
 }
 .totalcomments {
   font-size: 15px;
   font-family: Young;
 }
 .receiptinfo {
-  /*margin: 15px;*/
     padding: 15px 5px;
     text-align: center;
+    font-family: Young;
 }

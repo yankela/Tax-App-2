@@ -10,7 +10,6 @@
 </div>
 
 <div class="container-fluid">
-
   <% @expense_categories.each_with_index do |expense_category, index| %>
     <div class="expense-wrapper">
       <br>
@@ -23,9 +22,9 @@
           <div class="receiptphoto">
             <%= render receipt %>
           </div>
-          <%= link_to '<i class="fa fa-eye" aria-hidden="true"></i>'.html_safe, receipt_path(receipt) %>
-          <%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'.html_safe, edit_receipt_path(receipt) %>
-          <%= link_to '<i class="fa fa-minus-circle" aria-hidden="true"></i>'.html_safe, receipt, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to '<i class="fa fa-eye fa-2x" aria-hidden="true"></i>'.html_safe, receipt_path(receipt) %>
+          <%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_receipt_path(receipt) %>
+          <%= link_to '<i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>'.html_safe, receipt, method: :delete, data: { confirm: 'Are you sure?' } %>
           <br>
           $<%= receipt.total%>
           <br>
@@ -36,10 +35,3 @@
     </div>
   <% end %>
 </div>
-
-
-<%#= link_to 'Show', receipt_path(receipt) %>
-<%#= link_to 'Edit', edit_receipt_path(receipt) %>
-<%#= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%#= expense_category.receipt.total %>
-<%#= expense_category.receipt.comments%>

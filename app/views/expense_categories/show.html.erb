@@ -1,25 +1,23 @@
 <br>
 <br>
 <br>
-<p>
-  <strong>User:</strong>
-  <%= @expense_category.user.first_name %>
-</p>
+<br>
 
-<p>
-  <strong>Title:</strong>
 <%= @expense_category.title %>
-</p>
+<br>
 
 <!-- make a page that says all the categories
 and then make a loop that lists all the receipts under the expense category -->
 
 
 
-<%= link_to 'Edit', edit_expense_category_path(@expense_category) %> |
-<%= link_to 'Back', expense_categories_path %>
-
-<br><%= link_to 'Add Receipt', new_expense_category_receipt_path(@expense_category) %></br>
-
+<%= link_to 'Edit', edit_expense_category_path(@expense_category) %>
+<div class="addreceiptbutton">
+<br><%= link_to 'Add Receipt', new_expense_category_receipt_path(@expense_category), class: 'btn btn-default btn-lg' %></br>
+</div>
 
 <%= render @expense_category.receipts%>
+<br>
+$<%= @receipt.total%>
+<br>
+<%= @receipt.comments%>
