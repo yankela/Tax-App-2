@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-        loading
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -23,13 +23,12 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel1"></h5>
+        <h5 class="modal-title" id="exampleModalLabel1">Log in</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body1">
-        <h1>Log in</h1>
         <%= form_tag sessions_path do %>
         <p>
           <%= label_tag :username %>
@@ -55,6 +54,11 @@
 </div>
 
 
+
+
+
+
+
 <div class="home-background-color">
   <div class="intro">
     <% if !logged_in? %>
@@ -62,17 +66,16 @@
 
     <br>
     <%end%>
-    <h1>Don't miss the opportunity to get some cash back
+    <h1>Ever had your receipts laying around
       <br>
-      <span class="likethis">like this guy...</span></h1>
+      <span class="likethis">like this?</span></h1>
 
       <div class="png">
-        <img src="https://68.media.tumblr.com/4dc0152b39849d158e1b5fd28fa5c731/tumblr_oq28ukUH6U1uaq136o1_1280.jpg" alt="little guy" height="370">
+        <img src="https://68.media.tumblr.com/c45e80c47995f2056c6d8249f40705d8/tumblr_oq9c4pEbPp1uaq136o1_1280.png" alt="little guy" height="370">
       </div>
 
 
-      <p>Create custom expense categories and upload receipts on the go. This helps you keep your expenses
-        organized and ready for tax season.
+      <p> SpentBook's got you covered. Upload photos of receipts on the go and search for them when you need them. Also, we help you keep track all year long so you never miss a penny during tax season.
         <% if !logged_in? %>
         Sign up and see how the magic happens!
         <% else %>

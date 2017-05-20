@@ -8,7 +8,3 @@ function ready() {
      $('#new_user').submit();
    });
  }
-
- // Rails/Turbolinks ready function
- //   works on Turbolinks/AJAX page loads
- $(document).on('turbolinks:load', ready);

@@ -17,9 +17,11 @@
     <br>
     <% expense_category.receipts.each do |receipt| %>
     <span class="pdfreceipt"><td><%= render receipt %></td></span>
-      <td><%= link_to 'Show', receipt_path(receipt) %></td>
-      <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
-      <td><%= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <%= receipt.total%>
+    <%= receipt.comments%>
+    <td><%= link_to 'Show', receipt_path(receipt) %></td>
+    <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
+    <td><%= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
   </tr>
   <% end %>

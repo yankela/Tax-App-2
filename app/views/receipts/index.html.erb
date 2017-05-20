@@ -26,6 +26,8 @@
       <br>
       <td><%= receipt.expense_category.title %></td>
       <br>
+      <%= receipt.total%>
+      <%= receipt.comments%>
       <td><%= image_tag receipt.picture.url(:medium)%></td>
       <td><%= link_to 'Show', receipt_path(receipt) %></td>
       <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
