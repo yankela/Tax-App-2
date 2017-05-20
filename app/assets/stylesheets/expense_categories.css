@@ -117,11 +117,14 @@ section.module.parallax-1 {
 /*======================EXPENSE CATEGORIES SHOW PAGE============================*/
 
 /*ADD RECEIPT BUTTON*/
+.addreceiptbutton {
+  text-align: center;
+  padding: .5em;
+}
 .addreceiptbutton .btn-default {
   background-color: #7CCFFF;
   color: #fff;
   border-color: #fff;
-  text-align: center;
   font-family: Young;
   border-radius: 15px;
 }
@@ -132,8 +135,14 @@ section.module.parallax-1 {
   color: #FFF;
   border-color: #b0e2ff;
 }
-
-
+.expensetitle {
+  font-size: 50px;
+  font-family: Porter;
+  text-align: center;
+}
+.expenseedit {
+  text-align: center;
+}
 @media all and (max-width: 750px) {
   section.module.parallax-1 {
     background-image: url("makingitrain.png");
