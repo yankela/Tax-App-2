@@ -204,24 +204,35 @@ section.module.parallax-1 {
 }
 
 .pdfbutton .btn-default {
-  background-color: #b2d88d;
+  background-color: #7CCFFF;
   color: #fff;
   border-color: #fff;
+  text-align: center;
   font-family: Young;
   border-radius: 15px;
 }
 .pdfbutton .btn-default:hover,
 .pdfbtn-default:focus,
 .pdfbtn-default:active    {
-  background-color: #D4F5B7;
+  background-color: #b0e2ff;
   color: #FFF;
-  border-color: #D4F5B7;
+  border-color: #b0e2ff;
 }
 
 .pdftitle {
   font-family: Porter;
   font-size: 25px;
+  text-align: center;
 }
-.pdfreceipts {
+/*.pdfreceipts {
   margin: 1em;
+}*/
+.showreceipt {
+  color: red;
+}
+.editreceipt {
+
+}
+.destroyreceipt {
+
 }

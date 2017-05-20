@@ -32,6 +32,7 @@ end
   # POST /receipts
   # POST /receipts.json
   def create
+    byebug
     @expense_category = ExpenseCategory.find(params[:expense_category_id  ])
 
     @receipt = Receipt.new(receipt_params)
@@ -80,7 +81,7 @@ end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def receipt_params
-    params.require(:receipt).permit(:picture, :expense_category_id)
+    params.require(:receipt).permit(:picture, :expense_category_id, :total, :comments)
 
   end
 end

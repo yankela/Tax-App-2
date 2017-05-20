@@ -9,23 +9,24 @@
   <%= render :partial => 'layouts/partial.html.erb' %>
 </div>
 
-<tbody>
-  <% @expense_categories.each do |expense_category| %>
-  <tr>
-    <br>
-    <span class="pdftitle"><td><%= expense_category.title %></td></span>
-    <br>
-    <% expense_category.receipts.each do |receipt| %>
-    <span class="pdfreceipt"><td><%= render receipt %></td></span>
-    <%= receipt.total%>
-    <%= receipt.comments%>
-    <td><%= link_to 'Show', receipt_path(receipt) %></td>
-    <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
-    <td><%= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% end %>
-  </tr>
-  <% end %>
-</tbody>
+
+<% @expense_categories.each do |expense_category| %>
+<br>
+<div class="pdftitle"><%= expense_category.title %></div>
+<br>
+<% expense_category.receipts.each do |receipt| %>
+<div class="">
+<%= render receipt %>
+<%= link_to '<i class="fa fa-eye" aria-hidden="true"></i>'.html_safe, receipt_path(receipt) %>
+<%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'.html_safe, edit_receipt_path(receipt) %>
+<%= link_to '<i class="fa fa-minus-circle" aria-hidden="true"></i>'.html_safe, receipt, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= receipt.total%>
+<%= receipt.comments%>
+</div>
+<% end %>
+
+<% end %>
+
 
 <%#= link_to 'Show', receipt_path(receipt) %>
 <%#= link_to 'Edit', edit_receipt_path(receipt) %>
