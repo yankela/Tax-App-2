@@ -7,11 +7,11 @@ class ReceiptsController < ApplicationController
   def index
     @receipts = Receipt.all
     respond_to do |format|
-  format.html
-  format.pdf do
-    render :pdf => "receipts.pdf",:template => "receipts/index.html.erb"   # Excluding ".pdf" extension.
-  end
-end
+      format.html
+      format.pdf do
+        render :pdf => "receipts.pdf",:template => "receipts/index.html.erb"   # Excluding ".pdf" extension.
+      end
+    end
   end
 
   # GET /receipts/1
@@ -27,6 +27,8 @@ end
 
   # GET /receipts/1/edit
   def edit
+
+
   end
 
   # POST /receipts
@@ -35,7 +37,7 @@ end
     @expense_category = ExpenseCategory.find(params[:expense_category_id  ])
 
     @receipt = Receipt.new(receipt_params)
-      @receipt.expense_category = @expense_category
+    @receipt.expense_category = @expense_category
 
     respond_to do |format|
       if @receipt.save
