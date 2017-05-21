@@ -1,4 +1,5 @@
 <br>
+<br>
 <p id="notice"><%= notice %></p>
 <div class="showimage">
   <%= image_tag @receipt.picture.url(:large)%>
@@ -7,7 +8,7 @@
 
   <%=@receipt.store_name%>
   <br>
-  <%=@receipt.total%>
+  <%=number_to_currency @receipt.total%>
   <br>
   <%= @receipt.comments%>
 
