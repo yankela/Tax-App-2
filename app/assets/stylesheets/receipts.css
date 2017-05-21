@@ -44,7 +44,7 @@ h1 .pdfintro {
 
 .fishingpng {
   text-align: center;
-  padding: 5em 0 5em 0;
+  padding: 3em 0 1em 0;
 }
 
 .showimage {
@@ -53,7 +53,7 @@ h1 .pdfintro {
 
 .reminder {
   text-align: center;
-  padding-top: .5em;
+  /*padding-top: .5em;*/
   font-size: 20px;
   font-family: 'Biko';
 }
