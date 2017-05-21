@@ -22,7 +22,7 @@
   </div>
   <div class="fieldreceipt">
     <%= form.label :total %>
-    <%= form.number_field :total %>
+    <%= form.number_field number_to_currency :total %>
   </div>
   <div class="fieldreceipt">
     <%= form.label :store_name %>
