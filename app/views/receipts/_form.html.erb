@@ -12,10 +12,9 @@
   <% end %>
 
 <br>
-<br>
-<br>
-<br>
-<br>
+
+
+<h1 class="reminder">Hey, <%= current_user.first_name %>. We added a smart camera feature that reads the receipt total. You can choose to type it in, or we'll do it for you. Just leave the "Total" field empty.</h1>
 
   <div class="fieldreceipt">
     <%= form.file_field :picture, id: :receipt_picture %>

@@ -50,3 +50,10 @@ h1 .pdfintro {
 .showimage {
   text-align: center;
 }
+
+.reminder {
+  text-align: center;
+  padding-top: .5em;
+  font-size: 20px;
+  font-family: 'Biko';
+}
