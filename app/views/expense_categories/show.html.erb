@@ -49,7 +49,8 @@ and then make a loop that lists all the receipts under the expense category -->
             <br>
             <%= number_to_currency receipts.total%>
             <br>
-            <%=receipts.store_name%>
+            <%= receipts.store_name%>
+            <br>
             <%= receipts.comments%>
           </div>
           <% end %>
