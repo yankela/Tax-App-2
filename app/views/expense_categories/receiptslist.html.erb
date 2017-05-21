@@ -14,7 +14,7 @@
   <% @expense_categories.each_with_index do |expense_category, index| %>
     <div class="expense-wrapper">
       <br>
-      <div class="pdftitle"><%= expense_category.title %></div>
+      <div class="pdftitle"><%= expense_category.title %> | total: <%=number_to_currency expense_category.receipts.sum(:total) %></div>
       <br>
       <br>
       <div class="receipt-wrapper">
