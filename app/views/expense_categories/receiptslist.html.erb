@@ -24,7 +24,7 @@
             <%= render receipt %>
           </div>
           <%= link_to '<i class="fa fa-eye fa-2x" aria-hidden="true"></i>'.html_safe, receipt_path(receipt) %>
-          <%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_receipt_path(receipt) %>
+          <%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_receipt_path(expense_category, receipt) %>
           <%= link_to '<i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>'.html_safe, receipt, method: :delete, data: { confirm: 'Are you sure?' } %>
           <br>
           $<%= receipt.total%>
