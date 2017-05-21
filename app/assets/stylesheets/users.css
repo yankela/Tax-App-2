@@ -18,7 +18,7 @@ padding: 0 20px;
 .home-background-color {
   background-repeat: no-repeat;
   /*background-size: 100%;*/
-  height: 100vh;
+  height: 110vh;
   background-color: #f26d65;
 }
 .intro {
@@ -96,4 +96,12 @@ padding: 0 20px;
   background-color: #7CCFFF;
   color: #FFF;
   border-color: #7CCFFF;
+}
+@media only screen and (max-width: 980px) {
+  .home-background-color {
+    background-repeat: no-repeat;
+    /*background-size: 100%;*/
+    height: 125vh;
+    background-color: #f26d65;
+  }
 }
