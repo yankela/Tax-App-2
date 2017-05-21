@@ -6,3 +6,44 @@ html {
 h1 .pdfintro {
   font-family: Porter;
 }
+
+.fieldreceipt {
+  font-family: Young;
+  margin-left: 45%;
+  margin-right: 50%;
+}
+
+.actionsreceipt {
+  font-family: Young;
+  padding-left: 35%;
+  padding-right: 65%;
+  /*margin-top: 1em;*/
+}
+
+@media all and (max-width: 550px) {
+  .fieldreceipt {
+    font-family: Young;
+    margin-left: 30%;
+    margin-right: 50%;
+  }
+}
+@media all and (min-width: 551px) {
+  .actionsreceipt{
+    font-family: Young;
+    padding-left: 48%;
+    padding-right: 65%;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .actionsreceipt {
+    font-family: Young;
+    padding-left: 46.5%;
+    padding-right: 65%;
+  }
+}
+
+.fishingpng {
+  text-align: center;
+  padding: 5em 0 5em 0;
+}
