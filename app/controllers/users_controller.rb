@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to new_expense_category_path, notice: 'User was successfully created.' }
+        format.html { redirect_to expense_categories_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
         session[:user_id] = @user.id
       else

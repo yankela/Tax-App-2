@@ -273,3 +273,14 @@ section.module.parallax-1 {
     text-align: center;
     font-family: 'Biko';
 }
+.fieldnew {
+  font-family: 'Biko';
+  margin-left: 40%;
+  margin-right: 50%;
+}
+.actionsnew {
+  font-family: 'Biko';
+  margin-left: 40%;
+  margin-right: 50%;
+  margin-top: 1em;
+}
