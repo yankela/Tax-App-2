@@ -1,12 +1,16 @@
 <br>
 <br>
 <br>
-<%= image_tag @receipt.picture.url(:large)%>
-<!-- <p>
-<%=@receipt.total%>
-</p>
-<p>
-<%= @receipt.comments%>
-</p> -->
-
 <p id="notice"><%= notice %></p>
+<div class="showimage">
+  <%= image_tag @receipt.picture.url(:large)%>
+</div>
+<div class="receiptinfo">
+
+  <%=@receipt.store_name%>
+  <br>
+  <%=@receipt.total%>
+  <br>
+  <%= @receipt.comments%>
+
+</div>

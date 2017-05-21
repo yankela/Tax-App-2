@@ -38,22 +38,22 @@ table {
 /*VIEW EDIT DELETE BUTTONS*/
 
 .fa-eye:hover {
-  color: #7CCFFF;
-  background-color: #ededed;
+  color: #c6dcff;
+  background-color: #fff;
 }
 .fa-eye {
   color: #7CCFFF;
 }
 .fa-pencil-square-o:hover{
   color: #B5DEA6;
-  background-color: #ededed;
+  background-color: #fff;
 }
 .fa-pencil-square-o {
   color: #9ec691;
 }
 .fa-minus-circle:hover {
-  color: #F86E64;
-  background-color: #ededed;
+  color: #ff9393;
+  background-color: #fff;
 }
 .fa-minus-circle {
   color: #F86E64;
@@ -261,7 +261,8 @@ section.module.parallax-1 {
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-  /*padding: 20px 0;*/
+  margin: 0;
+  padding: 0;
 }
 .totalcomments {
   font-size: 15px;
