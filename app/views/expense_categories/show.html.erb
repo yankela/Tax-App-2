@@ -17,24 +17,7 @@
     </div>
   </div>
 </div>
-<div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel5">View Receipt</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body5">
-        loading
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 <br>
 <br>
 <br>
@@ -60,7 +43,7 @@ and then make a loop that lists all the receipts under the expense category -->
             <div class="receiptphoto">
               <%= render receipts %>
             </div>
-            <%= link_to '<i class="fa fa-eye fa-2x" aria-hidden="true"></i>'.html_safe, receipt_path(receipts), local: true, id: 'show_receipt'%>
+            <%= link_to '<i class="fa fa-eye fa-2x" aria-hidden="true"></i>'.html_safe, receipt_path(receipts)%>
             <%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_receipt_path(@expense_category, receipts.id) %>
             <%= link_to '<i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>'.html_safe, receipts, method: :delete, data: { confirm: 'Are you sure?' } %>
             <br>
