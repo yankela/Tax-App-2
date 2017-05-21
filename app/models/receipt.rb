@@ -1,6 +1,10 @@
 class Receipt < ApplicationRecord
   belongs_to :expense_category#, touch: true
+  include AlgoliaSearch
 
+    algoliasearch do
+      attribute :text_response, :created_at, :total, :comments
+    end
 
   validates :picture,
   attachment_content_type: { content_type: /\Aimage\/.*\Z/ },
