@@ -19,7 +19,10 @@
    font-family: 'Lemon';
    src: url('LemonMilk.otf');
  }
-
+ @font-face {
+   font-family: 'Biko';
+   src: url('Biko_Regular.otf');
+ }
 body {
    margin: 0;
    padding: 0;

@@ -17,19 +17,19 @@ body {
   text-align: center;
 }
 .welcome p {
-  font-family: Young;
+  font-family: 'Biko';
   font-size: 20px;
 }
 /*TABLE*/
 
 tbody tr td {
-  font-family: Young;
+  font-family: 'Biko';
   flex-flow: column;
   font-size: 18px;
   width: 100%;
 }
 tbody tr td .datecreatedexp {
-  font-family: Young;
+  font-family: 'Biko';
 }
 table {
   margin: .5em;
@@ -104,7 +104,7 @@ section.module.parallax-1 {
   color: #fff;
   border-color: #fff;
   text-align: center;
-  font-family: Young;
+  font-family: 'Biko';
   border-radius: 15px;
 }
 .newexpensebutton .btn-default:hover,
@@ -125,7 +125,7 @@ section.module.parallax-1 {
   background-color: #7CCFFF;
   color: #fff;
   border-color: #fff;
-  font-family: Young;
+  font-family: 'Biko';
   border-radius: 15px;
 }
 .addreceiptbutton .btn-default:hover,
@@ -219,14 +219,14 @@ section.module.parallax-1 {
 /*========================RECEIPTS LIST PAGE======================================*/
 /*INTRO*/
 .pdfintro {
-  font-family: Young;
+  font-family: 'Biko';
   font-size: 25px;
   text-align: center;
 }
 /*PDF BUTTON*/
 .pdfbutton {
   padding: .3em 0em 0em 0em;
-  font-family: Young;
+  font-family: 'Biko';
   font-size: 25px;
   color: #5E7280;
   text-align: center;
@@ -236,7 +236,7 @@ section.module.parallax-1 {
   color: #fff;
   border-color: #fff;
   text-align: center;
-  font-family: Young;
+  font-family: 'Biko';
   border-radius: 15px;
 }
 .pdfbutton .btn-default:hover,
@@ -265,10 +265,10 @@ section.module.parallax-1 {
 }
 .totalcomments {
   font-size: 15px;
-  font-family: Young;
+  font-family: 'Biko';
 }
 .receiptinfo {
     padding: 15px 5px;
     text-align: center;
-    font-family: Young;
+    font-family: 'Biko';
 }

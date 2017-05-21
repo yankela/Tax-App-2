@@ -8,13 +8,13 @@ h1 .pdfintro {
 }
 
 .fieldreceipt {
-  font-family: Young;
+  font-family: 'Biko';
   margin-left: 45%;
   margin-right: 50%;
 }
 
 .actionsreceipt {
-  font-family: Young;
+  font-family: 'Biko';
   padding-left: 35%;
   padding-right: 65%;
   margin-top: 1em;
@@ -22,14 +22,14 @@ h1 .pdfintro {
 
 @media all and (max-width: 550px) {
   .fieldreceipt {
-    font-family: Young;
+    font-family: 'Biko';
     margin-left: 30%;
     margin-right: 50%;
   }
 }
 @media all and (min-width: 551px) {
   .actionsreceipt{
-    font-family: Young;
+    font-family: 'Biko';
     padding-left: 48%;
     padding-right: 65%;
   }
@@ -37,7 +37,7 @@ h1 .pdfintro {
 
 @media all and (min-width: 700px) {
   .actionsreceipt {
-    font-family: Young;
+    font-family: 'Biko';
     padding-left: 46.5%;
     padding-right: 65%;
   }

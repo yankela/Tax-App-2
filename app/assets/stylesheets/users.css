@@ -24,11 +24,11 @@ padding: 0 20px;
 .intro {
   color: white;
   text-align: center;
-  font-family: Young;
+  font-family: 'Biko';
   font-size: 30px;
 }
 .intro p {
-  font-family: Young;
+  font-family: 'Biko';
   font-size: 18px;
   padding: .2em;
 }
@@ -44,7 +44,7 @@ padding: 0 20px;
 .continueorganizing {
   margin-top: -1.2em;
   padding: .3em 0em 0em 0em;
-  font-family: Young;
+  font-family: 'Biko';
   font-size: 25px;
   color: #5E7280;
   text-align: center;
@@ -65,7 +65,7 @@ padding: 0 20px;
 }
 .button {
   padding: .3em 0em 0em 0em;
-  font-family: Young;
+  font-family: 'Biko';
   font-size: 25px;
   color: #5E7280;
   text-align: center;
@@ -73,7 +73,7 @@ padding: 0 20px;
 
 
 .login-logout a {
-  font-family: Young;
+  font-family: 'Biko';
   float: bottom;
   font-size: 15px;
   color: white;
