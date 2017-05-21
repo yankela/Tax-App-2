@@ -84,7 +84,7 @@
       <td class="datecreatedexp"><%= expense_category.updated_at.strftime("%b %d,%Y")%></td>
       <td><%= link_to '<i class="fa fa-eye" aria-hidden="true"></i>'.html_safe, expense_category %></td>
       <td><%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(expense_category), remote: true %></td>
-      <td><%= link_to '<i class="fa fa-minus-circle" aria-hidden="true"></i>'.html_safe, expense_category, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %></td>
+      <td><%= link_to '<i class="fa fa-minus-circle" aria-hidden="true"></i>'.html_safe, expense_category, method: :delete, data: { confirm: 'Warning!! This delete all your receipts under this category. Are you sure?!' } %></td>
     </tr>
     <% end %>
   </tbody>
