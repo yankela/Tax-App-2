@@ -13,6 +13,8 @@ gem 'rails', '~> 5.1.0'
 gem 'pg'
 gem 'hirb'
 ruby "2.4.1"
+gem "algoliasearch-rails"
+
 gem 'dotenv-rails'
 gem "delayed_paperclip"
 gem 'google-cloud-vision'
