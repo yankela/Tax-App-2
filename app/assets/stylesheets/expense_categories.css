@@ -13,7 +13,7 @@ body {
 
 /*INTRO*/
 .welcome {
-  font-family: Porter;
+  font-family: 'Lemon';
   text-align: center;
 }
 .welcome p {
@@ -96,7 +96,7 @@ section.module.parallax-1 {
   padding: 1em;
 }
 .newexpensebutton h2 {
-  font-family: Porter;
+  font-family: 'Lemon';
   padding: .5em;
 }
 .newexpensebutton .btn-default {
@@ -137,7 +137,7 @@ section.module.parallax-1 {
 }
 .expensetitle {
   font-size: 50px;
-  font-family: Porter;
+  font-family: 'Lemon';
   text-align: center;
 }
 .expenseedit {
@@ -248,7 +248,7 @@ section.module.parallax-1 {
 }
 /*RECEIPTS STYLING*/
 .pdftitle {
-  font-family: Porter;
+  font-family: 'Lemon';
   font-size: 25px;
   text-align: center;
 }
