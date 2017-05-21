@@ -23,37 +23,36 @@
 <br>
 
 <div class="expensetitle">
-  <%= @expense_category.title %>
+  <%= @expense_category.title %> | Total: <%=number_to_currency @expense_category.receipts.sum(:total) %> 
 </div>
 <div class="expenseedit"><%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(@expense_category), remote: true  %>
+</div>
 <div class="addreceiptbutton">
-  <div class="">
-
-<br><%= link_to 'Add Receipt', new_expense_category_receipt_path(@expense_category), class: 'btn btn-default btn-lg' %></br>
-  </div>
+  <br><%= link_to 'Add Receipt', new_expense_category_receipt_path(@expense_category), class: 'btn btn-default btn-lg' %></br>
+</div>
 <!-- make a page that says all the categories
 and then make a loop that lists all the receipts under the expense category -->
 
 
-    <div class="container-fluid">
-      <% @expense_category.receipts.each do |receipts| %>
-      <div class="expense-wrapper">
-        <div class="receipt-wrapper">
-          <div class="receiptinfo">
-            <div class="receiptphoto">
-              <%= render receipts %>
-            </div>
-            <%= link_to '<i class="fa fa-eye fa-2x" aria-hidden="true"></i>'.html_safe, receipt_path(receipts)%>
-            <%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_receipt_path(@expense_category, receipts.id) %>
-            <%= link_to '<i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>'.html_safe, receipts, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <br>
-            $<%=receipts.total%>
-            <br>
-            <%= receipts.store_name%>
-            <br>
-            <%= receipts.comments%>
-          </div>
-          <% end %>
+<div class="container-fluid">
+  <% @expense_category.receipts.each do |receipts| %>
+  <div class="expense-wrapper">
+    <div class="receipt-wrapper">
+      <div class="receiptinfo">
+        <div class="receiptphoto">
+          <%= render receipts %>
         </div>
+        <%= link_to '<i class="fa fa-eye fa-2x" aria-hidden="true"></i>'.html_safe, receipt_path(receipts)%>
+        <%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_receipt_path(@expense_category, receipts.id) %>
+        <%= link_to '<i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>'.html_safe, receipts, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <br>
+        <%= number_to_currency receipts.total%>
+        <br>
+        <%= receipts.store_name%>
+        <br>
+        <%= receipts.comments%>
       </div>
+      <% end %>
     </div>
+  </div>
+</div>

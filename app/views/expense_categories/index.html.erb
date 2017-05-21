@@ -69,6 +69,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Total</th>
       <th>Date</th>
       <th>View</th>
       <th>Edit</th>
@@ -81,6 +82,7 @@
     <% @expense_categories.each do |expense_category| %>
     <tr>
       <td><%= expense_category.title %></td>
+      <td><%=number_to_currency expense_category.receipts.sum(:total) %> </td>
       <td class="datecreatedexp"><%= expense_category.updated_at.strftime("%b %d,%Y")%></td>
       <td><%= link_to '<i class="fa fa-eye" aria-hidden="true"></i>'.html_safe, expense_category %></td>
       <td><%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(expense_category), remote: true %></td>
