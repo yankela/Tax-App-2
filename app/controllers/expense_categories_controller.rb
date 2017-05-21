@@ -10,7 +10,6 @@ class ExpenseCategoriesController < ApplicationController
   # GET /expense_categories/1
   # GET /expense_categories/1.json
   def show
-    @receipt = Receipt.new
   end
 
   # GET /expense_categories/new
