@@ -13,6 +13,7 @@ class Receipt < ApplicationRecord
   has_attached_file :picture, styles: {
     thumb: '100x100>',
     medium: '300x300>',
+    kinda_large: '400x500>',
     large: '600x800>'
   }
 

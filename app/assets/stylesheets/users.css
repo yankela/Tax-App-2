@@ -18,7 +18,7 @@ padding: 0 20px;
 .home-background-color {
   background-repeat: no-repeat;
   /*background-size: 100%;*/
-  height: 110vh;
+  height: 100%;
   background-color: #f26d65;
 }
 .intro {
@@ -114,7 +114,7 @@ padding: 0 20px;
     margin-right: 80%;
   }
 }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 400px) {
   .field {
     font-family: 'Biko';
     margin-left: 38%;
@@ -124,5 +124,11 @@ padding: 0 20px;
     font-family: 'Biko';
     font-size: 18px;
     padding: 1em;
+  }
+  .home-background-color {
+    background-repeat: no-repeat;
+    /*background-size: 100%;*/
+    height: 115vh;
+    background-color: #f26d65;
   }
 }
