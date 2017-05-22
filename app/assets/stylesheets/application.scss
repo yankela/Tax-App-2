@@ -17,11 +17,11 @@
  */
  @font-face {
    font-family: 'Lemon';
-   src: url('LemonMilk.otf');
+   src: asset-url("LemonMilk.otf");
  }
  @font-face {
    font-family: 'Biko';
-   src: url('Biko_Regular.otf');
+   src: asset-url('Biko_Regular.otf');
  }
 body {
    margin: 0;
