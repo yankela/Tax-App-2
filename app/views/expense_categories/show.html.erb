@@ -50,7 +50,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Update</button>
+        <button type="button" class="btn btn-primary" id='updatebutton'>Update</button>
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@
 <div class="expensetitle">
   <%= @expense_category.title %> | Total: <%=number_to_currency @expense_category.receipts.sum(:total) %>
 </div>
-<div class="expenseedit"><%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(@expense_category), remote: true  %>
+<div class="expenseedit" ><%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(@expense_category), remote: true  %>
 </div>
 <div class="addreceiptbutton">
   <br><%= link_to 'Add Receipt', new_expense_category_receipt_path(@expense_category), class: 'btn btn-default btn-lg' %></br>
@@ -81,7 +81,7 @@ and then make a loop that lists all the receipts under the expense category -->
           <%= render receipts %>
         </div>
         <%= link_to '<i class="fa fa-eye fa-2x" aria-hidden="true"></i>'.html_safe, receipt_path(receipts), remote: true%>
-        <%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_receipt_path(@expense_category, receipts.id), remote: true %>
+        <%= link_to '<i class="fa fa-pencil-square-o fa-2x" id="pencilupdate" aria-hidden="true"></i>'.html_safe, edit_expense_category_receipt_path(@expense_category, receipts.id), remote: true %>
         <%= link_to '<i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>'.html_safe, receipts, method: :delete, data: { confirm: 'Are you sure?' } %>
         <br>
         Date created: <%= receipts.created_at.strftime("%b %d,%Y")%>

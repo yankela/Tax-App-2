@@ -7,6 +7,8 @@ function ready() {
   // submit the edit_task form when the "primary" button is clicked
   $('.modal-footer .btn-primary').click(function() {
     $('#edit_receipt').submit();
+
+
   });
 }
 

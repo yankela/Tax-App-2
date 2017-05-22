@@ -27,3 +27,6 @@ $(document).scroll(function() {
     $('.fa-plus-circle').fadeOut();
   }
 });
+$('#updatebutton').click(function(){
+    $('div.action input').click();
+});
