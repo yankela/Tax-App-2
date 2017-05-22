@@ -87,7 +87,7 @@ section.module.parallax {
 }
 
 section.module.parallax-1 {
-  /*background-image: url("GreenHomePage.png");*/
+  /*background-image: asset-url("GreenHomePage.png");*/
   background-color: #f26d65;
 }
 /*CREATE NEW EXPENSE*/
@@ -145,7 +145,7 @@ section.module.parallax-1 {
 }
 @media all and (max-width: 750px) {
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 80%;
     background-repeat:no-repeat;
     background-position: 45% 18%;
@@ -157,7 +157,7 @@ section.module.parallax-1 {
 }
 /*@media all and (min-width: 400px) {
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 70%;
     background-repeat:no-repeat;
     background-position: 50% 25%;
@@ -166,7 +166,7 @@ section.module.parallax-1 {
 }
 @media all and (min-width: 550px) {
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 60%;
     background-repeat:no-repeat;
     background-position: 50% 17%;
@@ -175,7 +175,7 @@ section.module.parallax-1 {
 }
 @media all and (min-width: 650px) {
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 50%;
     background-repeat:no-repeat;
     background-position: 50% 17%;
@@ -188,7 +188,7 @@ section.module.parallax-1 {
     margin-top: 4em;
   }
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 40%;
     background-repeat:no-repeat;
     background-position: 35% 17%;
@@ -200,7 +200,7 @@ section.module.parallax-1 {
     margin-top: 4em;
   }
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 40%;
     background-repeat:no-repeat;
     background-position: 50% 17%;
@@ -209,7 +209,7 @@ section.module.parallax-1 {
 }*/
 @media all and (min-width: 751px) {
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 25%;
     background-repeat:no-repeat;
     background-position: 50% 20%;
