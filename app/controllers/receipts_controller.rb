@@ -28,7 +28,7 @@ class ReceiptsController < ApplicationController
   # GET /receipts/1/edit
   def edit
     @expense_category = ExpenseCategory.find(params[:expense_category_id  ])
-        
+
 
   end
 
@@ -38,6 +38,7 @@ class ReceiptsController < ApplicationController
     @expense_category = ExpenseCategory.find(params[:expense_category_id  ])
 
     @receipt = Receipt.new(receipt_params)
+    @receipt.userid = current_user.username
     @receipt.expense_category = @expense_category
 
     respond_to do |format|
@@ -85,7 +86,7 @@ class ReceiptsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def receipt_params
-    params.require(:receipt).permit(:picture, :expense_category_id, :total, :comments)
+    params.require(:receipt).permit(:picture, :expense_category_id, :total, :comments, :userid)
 
   end
 end

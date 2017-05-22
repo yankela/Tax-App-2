@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519151621) do
+ActiveRecord::Schema.define(version: 20170521205955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20170519151621) do
     t.text "text_response"
     t.decimal "total", precision: 8, scale: 2
     t.text "comments"
+    t.text "store_name"
+    t.string "userid"
     t.index ["expense_category_id"], name: "index_receipts_on_expense_category_id"
   end
 

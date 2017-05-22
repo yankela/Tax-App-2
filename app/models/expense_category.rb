@@ -4,7 +4,7 @@ class ExpenseCategory < ApplicationRecord
   include AlgoliaSearch
 
     algoliasearch do
-      attribute :title
+      
     end
   # has_many :receipts, dependent: destroy
 end

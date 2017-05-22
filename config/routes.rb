@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/login', to: 'sessions#new'
   get '/receiptslist', to: 'expense_categories#receiptslist'
+
+  get 'current_user' => "users#logged_in_player"
   # get 'users/new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

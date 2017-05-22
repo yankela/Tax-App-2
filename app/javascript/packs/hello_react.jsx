@@ -2,25 +2,60 @@
 // like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
 // of the page.
 
+
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import {InstantSearch, Hits, SearchBox, Highlight, RefinementList, CurrentRefinements, createConnector} from 'react-instantsearch/dom';
+const VirtualMenu = connectMenu(() => null);
+import {connectMenu} from 'react-instantsearch/connectors';
+const rp = this;
+const player =  $.ajax('/current_user').done(function(result){return((result));});
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
+const App = () =>
+  <InstantSearch
+    appId='GFZSGDPOU8'
+    apiKey='5613713adbb447d04c20fa1c12fcafe4'
+    indexName="Receipt"
+  >
+  <VirtualMenu attributeName="userid" defaultRefinement={'wbright91'} />
 
-Hello.defaultProps = {
-  name: 'David'
-}
+    {/* Search widgets will go there */}
+    <Search/>
 
-Hello.propTypes = {
-  name: PropTypes.string
-}
+  </InstantSearch>
+
+  function Search() {
+    return (
+      <div className="container">
+
+
+
+        <SearchBox />
+
+        <Hits hitComponent={Product} />
+      </div>
+    );
+  }
+  function Product({hit}) {
+  return (
+    <div style={{marginTop: '10px'}}>
+      <span className="hit-name">
+        <Highlight attributeName="text_response" hit={hit} />
+      </span>
+    </div>
+  );
+};
+
+// Needed only if your js app doesn't do it already.
+// Create-react-app does it for you
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <App />,
     document.body.appendChild(document.createElement('div')),
   )
 })

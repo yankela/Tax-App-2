@@ -18,6 +18,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def logged_in_player
+    
+    render json: {player: current_user.id}
+
+  end
+
 
   private
 

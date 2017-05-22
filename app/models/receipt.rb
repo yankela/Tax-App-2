@@ -3,7 +3,9 @@ class Receipt < ApplicationRecord
   include AlgoliaSearch
 
     algoliasearch do
-      attribute :text_response, :created_at, :total, :comments
+      attribute :text_response, :created_at, :total, :comments, :userid
+      attributesForFaceting [:userid]
+
     end
 
   validates :picture,
