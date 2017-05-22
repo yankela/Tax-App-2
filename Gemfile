@@ -14,7 +14,7 @@ gem 'pg'
 gem 'hirb'
 ruby "2.4.1"
 gem "algoliasearch-rails"
-
+gem 'webpacker'
 gem 'dotenv-rails'
 gem "delayed_paperclip"
 gem 'google-cloud-vision'
