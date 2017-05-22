@@ -31,7 +31,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Finish</button>
       </div>
     </div>
   </div>
@@ -85,11 +84,14 @@ and then make a loop that lists all the receipts under the expense category -->
         <%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_receipt_path(@expense_category, receipts.id), remote: true %>
         <%= link_to '<i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>'.html_safe, receipts, method: :delete, data: { confirm: 'Are you sure?' } %>
         <br>
+        Date created: <%= receipts.created_at.strftime("%b %d,%Y")%>
+        <br>
         <%= number_to_currency receipts.total%>
         <br>
         <%= receipts.store_name%>
         <br>
         <%= receipts.comments%>
+
       </div>
       <% end %>
     </div>
