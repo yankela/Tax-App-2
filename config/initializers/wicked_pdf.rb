@@ -19,6 +19,7 @@ WickedPdf.config.merge!({
   # Layout file to be used for all PDFs
   # (but can be overridden in `render :pdf` calls)
   # layout: 'pdf.html',
-  # :exe_path => '/usr/local/bin/wkhtmltopdf'
-  exe_path: 'wkhtmltopdf-linux-amd64'
+  # :exe_path  '/usr/local/bin/wkhtmltopdf'
+  :exe_path => 'wkhtmltopdf-linux-amd64'
 })
+WickedPdf.config[:exe_path] = 'wkhtmltopdf-linux-amd64'
