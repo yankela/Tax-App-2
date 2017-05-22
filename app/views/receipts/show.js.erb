@@ -1,2 +1,2 @@
-$('.modal-body5').html("<%= j render @receipt %>");
+$('.modal-body5').html("<%= j render 'receipt_popup', receipt: @receipt %>");
 $("#exampleModal5").modal();
