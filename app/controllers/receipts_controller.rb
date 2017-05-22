@@ -43,7 +43,7 @@ class ReceiptsController < ApplicationController
     respond_to do |format|
       if @receipt.save
         OcrTextJob.new(@receipt.id, @receipt.picture.url(:original)).enqueue
-        format.html { redirect_to @receipt, notice: 'Receipt was successfully created. Please remember to verify your totals.' }
+        format.html { redirect_to @receipt.expense_category, notice: 'Receipt was successfully created. Please remember to verify your totals.' }
         format.json { render :show, status: :created, location: @receipt }
       else
         format.html { render :new }
