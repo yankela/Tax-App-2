@@ -9,8 +9,8 @@ h1 .pdfintro {
 
 .fieldreceipt {
   font-family: 'Biko';
-  margin-left: 45%;
-  margin-right: 50%;
+  margin-left: 35%;
+  margin-right: 55%;
 }
 
 .action {
@@ -22,8 +22,8 @@ h1 .pdfintro {
 @media all and (max-width: 550px) {
   .fieldreceipt {
     font-family: 'Biko';
-    margin-left: 30%;
-    margin-right: 50%;
+    margin-left: 28%;
+    margin-right: 55%;
   }
 }
 @media all and (min-width: 551px) {
