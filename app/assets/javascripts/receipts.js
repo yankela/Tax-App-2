@@ -1,11 +1,12 @@
 function ready() {
-
+console.log('im ready')
 
   // auto-focus the task_name input box on every page load
   // $('#task_name').focus();
 
   // submit the edit_task form when the "primary" button is clicked
-  $('.modal-footer .btn-primary').click(function() {
+  $("#updatebutton").click(function() {
+    console.log('hello')
     $('#edit_receipt').submit();
 
 
