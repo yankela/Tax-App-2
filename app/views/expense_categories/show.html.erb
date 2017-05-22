@@ -60,7 +60,7 @@
 <br>
 
 <div class="expensetitle">
-  <%= @expense_category.title %> | Total: <%=number_to_currency @expense_category.receipts.sum(:total) %>
+  <%= link_to @expense_category.title %> | Total: <%=number_to_currency @expense_category.receipts.sum(:total) %>
 </div>
 <div class="expenseedit" ><%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(@expense_category), remote: true  %>
 </div>
