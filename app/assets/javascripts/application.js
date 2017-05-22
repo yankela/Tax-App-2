@@ -27,6 +27,10 @@ $(document).scroll(function() {
     $('.fa-plus-circle').fadeOut();
   }
 });
-$('#updatebutton').click(function(){
+
+$().ready(function() {
+  console.log("hi");
+  $('#updatebutton').click(function(){
     $('div.action input').click();
+});
 });
