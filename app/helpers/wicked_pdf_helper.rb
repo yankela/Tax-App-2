@@ -6,7 +6,7 @@ module WickedPdfHelper
        if asset.nil?
          raise "could not find asset for #{source}.css"
        else
-         "<style type='text/css'>#{asset.body}</style>"
+         "<style type='text/css'>#{asset}</style>"
        end
      }.join("\n").gsub(/url\(['"](.+)['"]\)(.+)/,%[url("#{wicked_pdf_image_location("\\1")}")\\2]).html_safe
    end
