@@ -1,9 +1,7 @@
 module WickedPdfHelper
   def wicked_pdf_stylesheet_link_tag(*sources)
      sources.collect { |source|
-       p source
-       asset = (Rails.application.assets || ::Sprockets::Railtie.build_environment(Rails.application)).find_asset("#{source}.css")
-       p asset
+       asset = (Rails.application.assets || ::Sprockets::Railtie.build_environment(Rails.application)).find_asset("#{source}.css").to_s
 
        if asset.nil?
          raise "could not find asset for #{source}.css"
