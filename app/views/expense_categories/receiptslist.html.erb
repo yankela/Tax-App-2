@@ -27,6 +27,8 @@
           <%#= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_receipt_path(expense_category, receipt) %>
           <%#= link_to '<i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>'.html_safe, receipt, method: :delete, data: { confirm: 'Are you sure?' } %>
           <br>
+          Date created: <%= receipt.created_at.strftime("%b %d,%Y")%>
+          <br>
           <%= number_to_currency receipt.total%>
           <br>
           <%= receipt.store_name %>
