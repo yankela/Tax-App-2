@@ -275,7 +275,7 @@ section.module.parallax-1 {
 }
 .fieldnew {
   font-family: 'Biko';
-  margin-left: 40%;
+  margin-left: 28%;
   margin-right: 50%;
 }
 .actionsnew {
@@ -284,3 +284,11 @@ section.module.parallax-1 {
   margin-right: 50%;
   margin-top: 1em;
 }
+
+ @media all and (min-width: 550px) {
+   .fieldnew {
+     font-family: 'Biko';
+     margin-left: 35%;
+     margin-right: 50%;
+   }
+ }
