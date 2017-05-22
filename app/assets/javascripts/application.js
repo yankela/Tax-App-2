@@ -28,9 +28,9 @@ $(document).scroll(function() {
   }
 });
 
-$().ready(function() {
-  console.log("hi");
-  $('#updatebutton').click(function(){
-    $('div.action input').click();
-});
-});
+// $().ready(function() {
+//   // console.log("hi");
+//   $('#updatebutton').click(function(){
+//     $('div.action input').click();
+//   });
+// });

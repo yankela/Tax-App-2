@@ -25,6 +25,16 @@ h1 .pdfintro {
     margin-left: 28%;
     margin-right: 55%;
   }
+  // #receipt-submit {
+  //   text-align: center;
+  //   // font-size: 50px;
+  // }
+  .action {
+    font-family: 'Biko';
+    text-align: center;
+    margin-top: 1em;
+    margin-left: 0em;
+  }
 }
 @media all and (min-width: 551px) {
   .actionsreceipt{
@@ -59,4 +69,8 @@ h1 .pdfintro {
 }
 .receiptpopup {
   text-align: center;
+}
+#receipt-submit {
+  margin-left: 36%;
+  margin-right: 55%;
 }
