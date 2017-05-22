@@ -1,1 +1,1 @@
-Resque.redis = 'localhost:6379'
+Resque.redis = ENV.fetch('REDIS_URL')
