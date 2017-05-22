@@ -1,1 +1,10 @@
-<%= image_tag receipt.picture.url(:large)%>
+<div class="receiptpopup">
+<%= image_tag receipt.picture.url, :size => '350x450'%>
+Date created: <span class="datecreatedexp"><%= receipt.created_at.strftime("%b %d,%Y")%></span>
+<br>
+<%= number_to_currency receipt.total%>
+<br>
+<%= receipt.store_name%>
+<br>
+<%= receipt.comments%>
+</div>
