@@ -72,7 +72,7 @@ class ReceiptsController < ApplicationController
   def destroy
     @receipt.destroy
     respond_to do |format|
-      format.html { redirect_to expense_categories_path, notice: 'Receipt was successfully destroyed.' }
+      format.html { redirect_to @receipt.expense_category, notice: 'Receipt was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
