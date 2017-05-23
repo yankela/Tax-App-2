@@ -1,18 +1,17 @@
 function ready() {
-console.log('im ready')
+  console.log('im ready')
 
   // auto-focus the task_name input box on every page load
   // $('#task_name').focus();
-
+  $(".spinner").hide();
   // submit the edit_task form when the "primary" button is clicked
   $("#updatebutton").click(function() {
-    console.log('hello')
     $('#edit_receipt').submit();
 
-
+  });
+  $("#receipt-submit").click(function(){
+    $(".spinner").show();
   });
 }
 
-// Rails/Turbolinks ready function
-//   works on Turbolinks/AJAX page loads
 $(document).on('turbolinks:load', ready);
