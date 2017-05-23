@@ -1,11 +1,15 @@
 <br>
 <br>
 
-
 <h1 class="reminder">Hey, <%= current_user.first_name %>. We added a smart camera feature that reads the receipt total.
   <br>
   You can choose to type it in, or we'll do it for you. Just leave the "Total" field empty.</h1>
-<%= render 'form', receipt: @receipt, expense_category: @expense_category %>
+  <%= render 'form', receipt: @receipt, expense_category: @expense_category %>
+  <div class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+  </div>
+</div>
 <div class="fishingpng">
   <img src="https://68.media.tumblr.com/128988990627d43e86d4b0f9a42a8d4b/tumblr_oqa5dyWd0j1uaq136o1_r1_1280.png" alt="little guy" width="320px">
 </div>
