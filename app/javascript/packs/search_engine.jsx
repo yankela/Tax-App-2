@@ -58,6 +58,6 @@ const App = () =>
 document.addEventListener('turbolinks:load', () => {
   ReactDOM.render(
     <App />,
-    document.body.appendChild(document.getElementById('searchengine')),
+    document.getElementById('searchengine'),
   )
 })
