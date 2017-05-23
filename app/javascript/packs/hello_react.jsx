@@ -13,13 +13,14 @@ import {connectMenu} from 'react-instantsearch/connectors';
 const rp = this;
 const player =  $.ajax('/current_user').done(function(result){return((result));});
 
+
 const App = () =>
   <InstantSearch
     appId='GFZSGDPOU8'
     apiKey='5613713adbb447d04c20fa1c12fcafe4'
     indexName="Receipt"
   >
-  <VirtualMenu attributeName="userid" defaultRefinement={'wbright91'} />
+  <VirtualMenu attributeName="userid" defaultRefinement={decodeURIComponent(window.location.search.substring(1)).split('=').pop()} />
 
     {/* Search widgets will go there */}
     <Search/>
@@ -43,6 +44,7 @@ const App = () =>
     <div style={{marginTop: '10px'}}>
       <span className="hit-name">
         <Highlight attributeName="text_response" hit={hit} />
+        <Highlight attributeName="store_name" hit={hit} />
       </span>
     </div>
   );

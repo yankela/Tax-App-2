@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170521205955) do
+ActiveRecord::Schema.define(version: 20170523040058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170521205955) do
     t.text "comments"
     t.text "store_name"
     t.string "userid"
+    t.string "address"
     t.index ["expense_category_id"], name: "index_receipts_on_expense_category_id"
   end
 
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170521205955) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "gmail_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end
