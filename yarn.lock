@@ -3749,6 +3749,10 @@ react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "~15.5.7"
 
+react-instantsearch-theme-algolia@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-theme-algolia/-/react-instantsearch-theme-algolia-4.0.1.tgz#7f33b763ae43b182ac6c6ec06ef3736eee4e5494"
+
 react-instantsearch@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/react-instantsearch/-/react-instantsearch-4.0.1.tgz#0502982ea613c4e5af7c688a256d74648e704f62"
