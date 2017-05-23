@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'wkhtmltopdf-binary'
+gem 'wkhtmltopdf-heroku', group: :production
+gem 'wkhtmltopdf-binary', group: :development
 gem 'wicked_pdf'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
