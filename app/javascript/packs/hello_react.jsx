@@ -23,33 +23,29 @@ const App = () =>
   <VirtualMenu attributeName="userid" defaultRefinement={decodeURIComponent(window.location.search.substring(1)).split('=').pop()} />
 
     {/* Search widgets will go there */}
-    <Search/>
+    <Search />
 
   </InstantSearch>
 
   function Search() {
     return (
       <div className="container">
-        <SearchBox />
+        <SearchBox autoFocus={true}
+          translations={{
+
+            placeholder: 'Search Through Your Receipts',
+          }}/>
         <Hits hitComponent={Product} />
       </div>
     );
   }
   function Product({hit}) {
   return (
-    <div style={{marginTop: '10px'}}>
-      <div>
-    </div>
-      <div>
-        <a href={hit.address} ><img src={hit.address}  height="200" width="200"/  ></a>
-
-
-
-    </div>
-      <span className="hit-name">
-        <Highlight attributeName="text_response" hit={hit} />
-        <Highlight attributeName="store_name" hit={hit} />
-      </span>
+    <div style={{marginTop: '30px'}}>
+      <div id="imagefloat"><a href={hit.address} ><img src={hit.address}  height="200" width="200"/ ></a></div>
+          <div className="hit-name" id="textresponseid">
+            <Highlight attributeName="text_response" hit={hit} />
+          </div>
     </div>
   );
 };

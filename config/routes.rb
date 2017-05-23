@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/login', to: 'sessions#new'
   get '/receiptslist', to: 'expense_categories#receiptslist'
-
+get '/search', to: 'expense_categories#search'
   get 'current_user' => "users#logged_in_player"
   # get 'users/new'
 

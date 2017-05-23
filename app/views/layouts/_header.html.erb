@@ -2,7 +2,8 @@
 <div class="nav-bar">
   <a href="#main"><%=link_to "main", root_path %></a>
   <a class="homebutton" href="#home"><%=link_to "home", expense_categories_path %></a>
-  <a href="#receipts"><%=link_to "receipts", receiptslist_path(xyz: current_user.username)%></a>
+  <a href="#receipts"><%=link_to "receipts", receiptslist_path%></a>
+  <a href="#receipts"><%=link_to "search", search_path(xyz: current_user.username)%></a>
   <a href="#logout"><%=link_to "log out", logout_path %></a>
 </div>
 <% else %>
