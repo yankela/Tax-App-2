@@ -9,6 +9,8 @@ class SessionsController < ApplicationController
     @user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
     if @user.nil?
       return redirect_to root_path, notice: "Please create an account."
+    elsif !@user
+      return redirect_to root_path, notice: "Wrong Password "
     else
       session[:user_id] = @user.id
       return redirect_to expense_categories_path if @user
