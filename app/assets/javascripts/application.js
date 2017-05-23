@@ -29,10 +29,3 @@ $(document).scroll(function() {
     $('.fa-plus-circle').fadeOut();
   }
 });
-
-// $().ready(function() {
-//   // console.log("hi");
-//   $('#updatebutton').click(function(){
-//     $('div.action input').click();
-//   });
-// });

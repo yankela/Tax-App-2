@@ -45,7 +45,7 @@ class ReceiptsController < ApplicationController
     respond_to do |format|
       if @receipt.save
         OcrTextJob.new(@receipt.id, @receipt.picture.url(:original)).enqueue
-        format.html { redirect_to @receipt, notice: 'User was successfully created.' }
+        format.html { redirect_to @receipt.expense_category, notice: 'Thanks for uploading!' }
         format.json { render :show, status: :created, location: @receipt }
       else
         format.html { render :new }
@@ -60,7 +60,7 @@ class ReceiptsController < ApplicationController
 
     respond_to do |format|
       if @receipt.update(receipt_params)
-        format.html { redirect_to @receipt, notice: 'Receipt was successfully updated.' }
+        format.html { redirect_to @receipt.expense_category, notice: 'Receipt was successfully updated.' }
         format.json { render :show, status: :ok, location: @receipt }
       else
         format.html { render :edit }
@@ -74,7 +74,7 @@ class ReceiptsController < ApplicationController
   def destroy
     @receipt.destroy
     respond_to do |format|
-      format.html { redirect_to receiptslist_path, notice: 'Receipt was successfully destroyed.' }
+      format.html { redirect_to @receipt.expense_category, notice: 'Receipt was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
