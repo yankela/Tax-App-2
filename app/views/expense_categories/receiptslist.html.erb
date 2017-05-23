@@ -20,7 +20,7 @@
   <% @expense_categories.each_with_index do |expense_category, index| %>
     <div class="expense-wrapper">
       <br>
-      <div class="pdftitle"><%= expense_category.title %></div>
+      <div class="pdftitle"><%= expense_category.title %> | total: <%=number_to_currency expense_category.receipts.sum(:total) %></div>
       <br>
       <br>
       <div class="receipt-wrapper">
@@ -29,11 +29,15 @@
           <div class="receiptphoto">
             <%= render receipt %>
           </div>
-          <%= link_to '<i class="fa fa-eye fa-2x" aria-hidden="true"></i>'.html_safe, receipt_path(receipt) %>
-          <%= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_receipt_path(receipt) %>
-          <%= link_to '<i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>'.html_safe, receipt, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%#= link_to '<i class="fa fa-eye fa-2x" aria-hidden="true"></i>'.html_safe, receipt_path(receipt) %>
+          <%#= link_to '<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>'.html_safe, edit_expense_category_receipt_path(expense_category, receipt) %>
+          <%#= link_to '<i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>'.html_safe, receipt, method: :delete, data: { confirm: 'Are you sure?' } %>
           <br>
-          $<%= receipt.total%>
+          Date created: <%= receipt.created_at.strftime("%b %d,%Y")%>
+          <br>
+          <%= number_to_currency receipt.total%>
+          <br>
+          <%= receipt.store_name %>
           <br>
           <%= receipt.comments%>
         </div>

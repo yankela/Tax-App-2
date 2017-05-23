@@ -15,6 +15,14 @@
   *= require bootstrap/dist/css/bootstrap.min
 
  */
+ @font-face {
+   font-family: 'Lemon';
+   src: asset-url("LemonMilk.otf");
+ }
+ @font-face {
+   font-family: 'Biko';
+   src: asset-url('Biko_Regular.otf');
+ }
 body {
    margin: 0;
    padding: 0;
@@ -44,7 +52,10 @@ body {
     padding: 14px 10px;
     text-decoration: none;
     font-size: 13px;
-    font-family: Porter;
+    font-family: 'Lemon';
+}
+.nav-bar a:hover {
+  background-color: #e8e8e8;
 }
 
 

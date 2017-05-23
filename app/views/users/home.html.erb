@@ -3,7 +3,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Sign up and maximize your tax return!</h5>
+        <h5 class="modal-title" id="exampleModalLabel">sign up</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -19,6 +19,7 @@
   </div>
 </div>
 
+<%= form_tag sessions_path do %>
 <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -29,29 +30,25 @@
         </button>
       </div>
       <div class="modal-body1">
-        <%= form_tag sessions_path do %>
-        <p>
+        <div class="field">
           <%= label_tag :username %>
           <%= text_field_tag :username %>
-        </p>
+        </div>
 
-        <p>
+        <div class = "field">
           <%= label_tag :password %>
           <%= password_field_tag :password %>
-        </p>
-        <p>
-          <%= submit_tag 'Log in' %>
-        </p>
-        <% end %>
-
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Log in</button>
+        <%= submit_tag 'Log in', class: "btn btn-primary"%>
+        <!-- <button type="button" class="btn btn-primary">Log in</button> -->
       </div>
     </div>
   </div>
 </div>
+<% end %>
 
 
 
@@ -66,6 +63,7 @@
 
     <br>
     <%end%>
+
     <h1>Ever had your receipts laying around
       <br>
       <span class="likethis">like this?</span></h1>

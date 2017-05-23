@@ -19,6 +19,8 @@
 
 
 
+
+
 $(document).scroll(function() {
   var y = $(this).scrollTop();
   if (y >= 550) {
@@ -27,3 +29,10 @@ $(document).scroll(function() {
     $('.fa-plus-circle').fadeOut();
   }
 });
+
+// $().ready(function() {
+//   // console.log("hi");
+//   $('#updatebutton').click(function(){
+//     $('div.action input').click();
+//   });
+// });

@@ -49,7 +49,7 @@
 </section>
 <p id="notice"><%= notice %></p>
 <div class="welcome">
-  <h1>Welcome back, <%= current_user.first_name %>!</h1>
+  <h1>Welcome, <%= current_user.first_name %>!</h1>
   <p>create categories to organize your receipts in different groups</p>
 </div>
 <div id=new-animated-expense>
@@ -69,6 +69,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Total</th>
       <th>Date</th>
       <th>View</th>
       <th>Edit</th>
@@ -81,10 +82,11 @@
     <% @expense_categories.each do |expense_category| %>
     <tr>
       <td><%= expense_category.title %></td>
+      <td><%=number_to_currency expense_category.receipts.sum(:total) %> </td>
       <td class="datecreatedexp"><%= expense_category.updated_at.strftime("%b %d,%Y")%></td>
       <td><%= link_to '<i class="fa fa-eye" aria-hidden="true"></i>'.html_safe, expense_category %></td>
       <td><%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'.html_safe, edit_expense_category_path(expense_category), remote: true %></td>
-      <td><%= link_to '<i class="fa fa-minus-circle" aria-hidden="true"></i>'.html_safe, expense_category, method: :delete, data: { confirm: 'Warning!! This delete all your receipts under this category. Are you sure?!' } %></td>
+      <td><%= link_to '<i class="fa fa-minus-circle" aria-hidden="true"></i>'.html_safe, expense_category, method: :delete, data: { confirm: 'Warning! This delete all your receipts under this category. Are you sure?' } %></td>
     </tr>
     <% end %>
   </tbody>

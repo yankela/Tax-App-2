@@ -13,23 +13,23 @@ body {
 
 /*INTRO*/
 .welcome {
-  font-family: Porter;
+  font-family: 'Lemon';
   text-align: center;
 }
 .welcome p {
-  font-family: Young;
+  font-family: 'Biko';
   font-size: 20px;
 }
 /*TABLE*/
 
 tbody tr td {
-  font-family: Young;
+  font-family: 'Biko';
   flex-flow: column;
   font-size: 18px;
   width: 100%;
 }
 tbody tr td .datecreatedexp {
-  font-family: Young;
+  font-family: 'Biko';
 }
 table {
   margin: .5em;
@@ -38,22 +38,22 @@ table {
 /*VIEW EDIT DELETE BUTTONS*/
 
 .fa-eye:hover {
-  color: #7CCFFF;
-  background-color: #ededed;
+  color: #c6dcff;
+  background-color: #fff;
 }
 .fa-eye {
   color: #7CCFFF;
 }
 .fa-pencil-square-o:hover{
   color: #B5DEA6;
-  background-color: #ededed;
+  background-color: #fff;
 }
 .fa-pencil-square-o {
   color: #9ec691;
 }
 .fa-minus-circle:hover {
-  color: #F86E64;
-  background-color: #ededed;
+  color: #ff9393;
+  background-color: #fff;
 }
 .fa-minus-circle {
   color: #F86E64;
@@ -87,7 +87,7 @@ section.module.parallax {
 }
 
 section.module.parallax-1 {
-  /*background-image: url("GreenHomePage.png");*/
+  /*background-image: asset-url("GreenHomePage.png");*/
   background-color: #f26d65;
 }
 /*CREATE NEW EXPENSE*/
@@ -96,7 +96,7 @@ section.module.parallax-1 {
   padding: 1em;
 }
 .newexpensebutton h2 {
-  font-family: Porter;
+  font-family: 'Lemon';
   padding: .5em;
 }
 .newexpensebutton .btn-default {
@@ -104,7 +104,7 @@ section.module.parallax-1 {
   color: #fff;
   border-color: #fff;
   text-align: center;
-  font-family: Young;
+  font-family: 'Biko';
   border-radius: 15px;
 }
 .newexpensebutton .btn-default:hover,
@@ -125,7 +125,7 @@ section.module.parallax-1 {
   background-color: #7CCFFF;
   color: #fff;
   border-color: #fff;
-  font-family: Young;
+  font-family: 'Biko';
   border-radius: 15px;
 }
 .addreceiptbutton .btn-default:hover,
@@ -137,7 +137,7 @@ section.module.parallax-1 {
 }
 .expensetitle {
   font-size: 50px;
-  font-family: Porter;
+  font-family: 'Lemon';
   text-align: center;
 }
 .expenseedit {
@@ -145,7 +145,7 @@ section.module.parallax-1 {
 }
 @media all and (max-width: 750px) {
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 80%;
     background-repeat:no-repeat;
     background-position: 45% 18%;
@@ -157,7 +157,7 @@ section.module.parallax-1 {
 }
 /*@media all and (min-width: 400px) {
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 70%;
     background-repeat:no-repeat;
     background-position: 50% 25%;
@@ -166,7 +166,7 @@ section.module.parallax-1 {
 }
 @media all and (min-width: 550px) {
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 60%;
     background-repeat:no-repeat;
     background-position: 50% 17%;
@@ -175,7 +175,7 @@ section.module.parallax-1 {
 }
 @media all and (min-width: 650px) {
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 50%;
     background-repeat:no-repeat;
     background-position: 50% 17%;
@@ -188,7 +188,7 @@ section.module.parallax-1 {
     margin-top: 4em;
   }
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 40%;
     background-repeat:no-repeat;
     background-position: 35% 17%;
@@ -200,7 +200,7 @@ section.module.parallax-1 {
     margin-top: 4em;
   }
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 40%;
     background-repeat:no-repeat;
     background-position: 50% 17%;
@@ -209,7 +209,7 @@ section.module.parallax-1 {
 }*/
 @media all and (min-width: 751px) {
   section.module.parallax-1 {
-    background-image: url("makingitrain.png");
+    background-image: asset-url("makingitrain.png");
     background-size: 25%;
     background-repeat:no-repeat;
     background-position: 50% 20%;
@@ -219,14 +219,14 @@ section.module.parallax-1 {
 /*========================RECEIPTS LIST PAGE======================================*/
 /*INTRO*/
 .pdfintro {
-  font-family: Young;
+  font-family: 'Biko';
   font-size: 25px;
   text-align: center;
 }
 /*PDF BUTTON*/
 .pdfbutton {
   padding: .3em 0em 0em 0em;
-  font-family: Young;
+  font-family: 'Biko';
   font-size: 25px;
   color: #5E7280;
   text-align: center;
@@ -236,7 +236,7 @@ section.module.parallax-1 {
   color: #fff;
   border-color: #fff;
   text-align: center;
-  font-family: Young;
+  font-family: 'Biko';
   border-radius: 15px;
 }
 .pdfbutton .btn-default:hover,
@@ -248,7 +248,7 @@ section.module.parallax-1 {
 }
 /*RECEIPTS STYLING*/
 .pdftitle {
-  font-family: Porter;
+  font-family: 'Lemon';
   font-size: 25px;
   text-align: center;
 }
@@ -261,14 +261,34 @@ section.module.parallax-1 {
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-  /*padding: 20px 0;*/
+  margin: 0;
+  padding: 0;
 }
 .totalcomments {
   font-size: 15px;
-  font-family: Young;
+  font-family: 'Biko';
 }
 .receiptinfo {
     padding: 15px 5px;
     text-align: center;
-    font-family: Young;
+    font-family: 'Biko';
 }
+.fieldnew {
+  font-family: 'Biko';
+  margin-left: 28%;
+  margin-right: 50%;
+}
+.actionsnew {
+  font-family: 'Biko';
+  margin-left: 40%;
+  margin-right: 50%;
+  margin-top: 1em;
+}
+
+ @media all and (min-width: 550px) {
+   .fieldnew {
+     font-family: 'Biko';
+     margin-left: 35%;
+     margin-right: 50%;
+   }
+ }

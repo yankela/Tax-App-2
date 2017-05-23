@@ -1,4 +1,4 @@
-<%= form_with(model:[expense_category,receipt], multipart: true) do |form| %>
+<%= form_with(model:[expense_category,receipt], local: true, id: 'edit_receipt') do |form| %>
   <% if receipt.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
@@ -11,24 +11,22 @@
     </div>
   <% end %>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-
   <div class="fieldreceipt">
     <%= form.file_field :picture, id: :receipt_picture %>
   </div>
   <div class="fieldreceipt">
     <%= form.label :total %>
-    <%= form.number_field :total %>
+    <%= form.number_field :total, step: "any" %>
+  </div>
+  <div class="fieldreceipt">
+    <%= form.label "store name" %>
+    <%= form.text_field :store_name %>
   </div>
   <div class="fieldreceipt">
     <%= form.label :comments %>
     <%= form.text_field :comments %>
   </div>
-  <div class="actionsreceipt">
-    <%= form.submit %>
+  <div class="action">
+    <%=  form.submit id: "receipt-submit"%>
   </div>
 <% end %>
