@@ -21,4 +21,4 @@
 #   # layout: 'pdf.html',
 #   # :exe_path  '/usr/local/bin/wkhtmltopdf'
 # })
-WickedPdf.config[:exe_path] = '/app/vendor/bundle/bin/wkhtmltopdf-linux-amd64'
+WickedPdf.config[:exe_path] = '/app/vendor/bundle/ruby/2.4.0/gems/wkhtmltopdf-heroku-2.12.4.0/bin/wkhtmltopdf-linux-amd64'
