@@ -38,12 +38,12 @@ class ReceiptsController < ApplicationController
     @expense_category = ExpenseCategory.find(params[:expense_category_id  ])
 
     @receipt = Receipt.new(receipt_params)
-    @receipt.userid = current_user.username
     @receipt.expense_category = @expense_category
 
 
     respond_to do |format|
       if @receipt.save
+        @receipt.userid = current_user.username
         OcrTextJob.new(@receipt.id, @receipt.picture.url(:original)).enqueue
         format.html { redirect_to @receipt.expense_category, notice: 'Thanks for uploading!' }
         format.json { render :show, status: :created, location: @receipt }
