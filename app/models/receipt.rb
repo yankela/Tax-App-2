@@ -1,9 +1,9 @@
 class Receipt < ApplicationRecord
-  include AlgoliaSearch
+include AlgoliaSearch
   belongs_to :expense_category#, touch: true
 
 
-    algoliasearch do
+      algoliasearch auto_index: false, auto_remove: false do
       attribute :store_name, :text_response, :comments, :created_at, :total, :store_name, :address, :userid
       attributesForFaceting [:userid]
     end
