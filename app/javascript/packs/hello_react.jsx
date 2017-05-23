@@ -3,10 +3,10 @@
 // of the page.
 
 
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import 'react-instantsearch-theme-algolia/style.scss';
 import {InstantSearch, Hits, SearchBox, Highlight, RefinementList, CurrentRefinements, createConnector} from 'react-instantsearch/dom';
 const VirtualMenu = connectMenu(() => null);
 import {connectMenu} from 'react-instantsearch/connectors';
@@ -30,11 +30,7 @@ const App = () =>
   function Search() {
     return (
       <div className="container">
-
-
-
         <SearchBox />
-
         <Hits hitComponent={Product} />
       </div>
     );
@@ -42,6 +38,14 @@ const App = () =>
   function Product({hit}) {
   return (
     <div style={{marginTop: '10px'}}>
+      <div>
+    </div>
+      <div>
+        <a href={hit.address} ><img src={hit.address}  height="200" width="200"/  ></a>
+
+
+
+    </div>
       <span className="hit-name">
         <Highlight attributeName="text_response" hit={hit} />
         <Highlight attributeName="store_name" hit={hit} />

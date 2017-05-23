@@ -95,7 +95,9 @@ class OcrTextJob < ApplicationJob
     receipt = Receipt.find(id)
     receipt.text_response = image.document
     receipt.total = repeat_counter(easy_check(receipt.text_response).select {|n| !n.nil?})
+    receipt.address = receipt.picture.url   
     receipt.save
+    Receipt.reindex!
 
     # [END vision_text_detection_gcs]
   end

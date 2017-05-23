@@ -40,8 +40,6 @@ class ReceiptsController < ApplicationController
     @receipt = Receipt.new(receipt_params)
     @receipt.userid = current_user.username
     @receipt.expense_category = @expense_category
-    
-
 
 
     respond_to do |format|

@@ -28,6 +28,7 @@
     "react-ajax": "^0.1.1",
     "react-dom": "^15.5.4",
     "react-instantsearch": "^4.0.1",
+    "react-instantsearch-theme-algolia": "^4.0.1",
     "react_ujs": "^2.2.0",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
@@ -36,6 +37,11 @@
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "css-loader": "^0.28.2",
+    "postcss-loader": "^2.0.5",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.17.0",
     "webpack-dev-server": "^2.4.5"
   }
 }

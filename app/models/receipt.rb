@@ -3,7 +3,7 @@ class Receipt < ApplicationRecord
   include AlgoliaSearch
 
     algoliasearch do
-      attribute :text_response, :created_at, :total, :comments, :userid
+      attribute :text_response, :created_at, :total, :comments, :userid, :address
       attributesForFaceting [:userid]
 
     end
@@ -13,6 +13,7 @@ class Receipt < ApplicationRecord
   attachment_size: { less_than: 5.megabytes }
 
   has_attached_file :picture, styles: {
+    original: {convert_options: '-auto-orient'},
     thumb: '100x100>',
     medium: '300x300>',
     large: '600x800>'
