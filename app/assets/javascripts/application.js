@@ -15,6 +15,8 @@
 //= require jquery/dist/jquery.min
 //= require_tree .
 //= require bootstrap/dist/js/bootstrap.min
+//= require algolia/v3/algoliasearch.min
+
 
 
 
