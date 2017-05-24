@@ -44,7 +44,9 @@ createcategory = function () {
       $("#createbutton").click(function(){
           $("#edit_expense_category").submit();
       });
-
+      $("#updatebutton").click(function(){
+          $("#edit_expense_category").submit();
+      });
 }
 
 
