@@ -30,6 +30,6 @@ $(document).scroll(function() {
   }
 });
 
-$("createbutton").click(function(){
+$("#createbutton").click(function(){
     $("#edit_expense_category").submit();
 });
