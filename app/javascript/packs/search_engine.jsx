@@ -17,7 +17,7 @@ const App = () =>
     apiKey='5613713adbb447d04c20fa1c12fcafe4'
     indexName="Receipt"
   >
-  <VirtualMenu attributeName="userid" defaultRefinement={decodeURIComponent(window.location.search.substring(1)).split('=').pop()} />
+  <VirtualMenu attributeName="userid" defaultRefinement={gon.username} />
 
     {/* Search widgets will go there */}
     <Search />

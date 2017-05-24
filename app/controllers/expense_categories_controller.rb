@@ -31,11 +31,15 @@ class ExpenseCategoriesController < ApplicationController
       end
     end
   end
+  def search
+    @check = current_user.username
+    gon.username = @check
+  end
 
   # GET /expense_categories/1/edit
   def edit
   end
-
+  
 
   # POST /expense_categories
   # POST /expense_categories.json
