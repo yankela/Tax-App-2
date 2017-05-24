@@ -27,11 +27,12 @@ const App = () =>
   function Search() {
     return (
       <div className="container">
-        <SearchBox autoFocus={true}
+        <div className="google"><SearchBox autoFocus={true}
           translations={{
 
             placeholder: 'Search Through Your Receipts',
-          }}/>
+          }}/></div>
+
         <Hits hitComponent={Product} />
       </div>
     );
