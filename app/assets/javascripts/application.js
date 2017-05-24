@@ -33,3 +33,6 @@ $(document).scroll(function() {
 $("#createbutton").click(function(){
     $("#edit_expense_category").submit();
 });
+
+
+$(document).on("turbolinks:load", ready); 
