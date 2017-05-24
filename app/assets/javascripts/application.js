@@ -31,19 +31,24 @@ $(document).scroll(function() {
 });
 
 
+  //
+  //
+  // $(".newexpensebutton").click(function() {
+  //   $("#createbutton").click(function(){
+  //       $("#edit_expense_category_title").submit();
+  //   });
+  // });
 
 
-  $(".newexpensebutton").click(function() {
-    $("#createbutton").click(function(){
-        $("#edit_expense_category_title").submit();
-    });
-  });
+createcategory = function () {
+      $("#createbutton").click(function(){
+          $("#edit_expense_category").submit();
+      });
+
+}
 
 
 
 
 
-
-
-
-$(document).on("turbolinks:load", ready);
+$(document).on("turbolinks:load", createcategory);
