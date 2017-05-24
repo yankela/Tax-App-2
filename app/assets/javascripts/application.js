@@ -35,15 +35,9 @@ $(document).scroll(function() {
 
   $(".newexpensebutton").click(function() {
     $("#createbutton").click(function(){
-        $("#edit_expense_category").submit();
+        $("#edit_expense_category_title").submit();
     });
   });
-
-
-
-
-
-
 
 
 
