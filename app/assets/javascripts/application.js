@@ -30,9 +30,26 @@ $(document).scroll(function() {
   }
 });
 
-$("#createbutton").click(function(){
-    $("#edit_expense_category").submit();
+
+
+$.ready(function(){
+  $(".newexpensebutton").click(function() {
+    $("#createbutton").click(function(){
+        $("#edit_expense_category").submit();
+    });
+  });
 });
 
 
-$(document).on("turbolinks:load", ready); 
+
+
+
+
+
+
+
+
+
+
+
+$(document).on("turbolinks:load", ready);
