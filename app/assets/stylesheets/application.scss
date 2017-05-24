@@ -23,6 +23,16 @@
   font-family: 'Biko';
   src: asset-url('Biko_Regular.otf');
 }
+@media all and (max-width: 550px) {
+  .google {
+    padding-left: 5%;
+  }
+
+.google {
+  text-align: center;
+  padding-left: 24%;
+  padding-right: 10%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -799,12 +809,12 @@ body {
                                                                                                                                                                                                                                                                                   .ais-SearchBox__root {
                                                                                                                                                                                                                                                                                     display: inline-block;
                                                                                                                                                                                                                                                                                     position: relative;
-                                                                                                                                                                                                                                                                                    max-width: 300px;
-                                                                                                                                                                                                                                                                                    width: 100%;
+
                                                                                                                                                                                                                                                                                     height: 46px;
                                                                                                                                                                                                                                                                                     white-space: nowrap;
                                                                                                                                                                                                                                                                                     box-sizing: border-box;
-                                                                                                                                                                                                                                                                                    font-size: 14px; }
+                                                                                                                                                                                                                                                                                    font-size: 14px;
+                                                                                                                                                                                                                                                                                }
 
                                                                                                                                                                                                                                                                                     .ais-SearchBox__wrapper {
                                                                                                                                                                                                                                                                                       width: 100%;
