@@ -32,13 +32,13 @@ $(document).scroll(function() {
 
 
 
-$.ready(function(){
+
   $(".newexpensebutton").click(function() {
     $("#createbutton").click(function(){
         $("#edit_expense_category").submit();
     });
   });
-});
+
 
 
 
