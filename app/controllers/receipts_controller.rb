@@ -45,7 +45,7 @@ class ReceiptsController < ApplicationController
     respond_to do |format|
       if @receipt.save
         OcrTextJob.new(@receipt.id, @receipt.picture.url(:original)).enqueue
-        Receipt.reindex!
+        Receipt.reindex
         format.html { redirect_to @receipt.expense_category, notice: 'Thanks for uploading!' }
         format.json { render :show, status: :created, location: @receipt }
       else
@@ -63,7 +63,7 @@ class ReceiptsController < ApplicationController
       if @receipt.update(receipt_params)
         format.html { redirect_to @receipt.expense_category, notice: 'Receipt was successfully updated.' }
         format.json { render :show, status: :ok, location: @receipt }
-        Receipt.reindex!
+        Receipt.reindex
       else
         format.html { render :edit }
         format.json { render json: @receipt.errors, status: :unprocessable_entity }
