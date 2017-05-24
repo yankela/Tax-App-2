@@ -29,3 +29,7 @@ $(document).scroll(function() {
     $('.fa-plus-circle').fadeOut();
   }
 });
+
+$(".btn.btn-primary").click(function(){
+    $("#edit_expense_category").submit();
+});
