@@ -50,11 +50,17 @@ const App = () =>
 // Needed only if your js app doesn't do it already.
 // Create-react-app does it for you
 
-
-
 document.addEventListener('turbolinks:load', () => {
-  ReactDOM.render(
-    <App />,
-    document.getElementById('searchengine'),
-  )
+  if (!!document.getElementById('searchengine')) {
+  console.log('testing page'),
+  ReactDOM.render(<App />, document.getElementById('searchengine'),)
+};
 })
+
+
+// document.addEventListener('turbolinks:load', () => {
+//   ReactDOM.render(
+//     <App />,
+//     document.getElementById('searchengine'),
+//   )
+// })
