@@ -16,8 +16,13 @@ receipts. It will also parse through the text data and update the total fields a
 
 
 -Framework- Rails 5.1, & webpacker
+
 -DB: Postgres & Redis(for Resque)
+
 -Search Page uses React & the Algolia Instant Search
+
 -Scanning of Receipts : Google Cloud Vision for the OCR
+
 -Storage : Into S3, using PaperClip & Delayed Paperclip gems
+
 -PDF: creates PDF of all receipts & categories using wicked_pdf gems
